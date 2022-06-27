@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2>Taller #3</h2>
+    <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/GFJ37jmFHpU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 1</h3>
+        <h5>1. Realizar la siguiente figura por medio del ciclo Para</h5>
+        <div class="codigo">
+            <pre>
+                Proceso Ejercicio1
+	
+                    Definir i Como Entero;
+                    Definir estrella Como Caracter;
+                    
+                    estrella <- " ";
+                    
+                    Para i<-0 Hasta 9 Con Paso 1 Hacer
+                        estrella <- Concatenar(estrella,"*");
+                        Escribir estrella;
+                    FinPara
+                    
+                FinProceso
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 2</h3>
+        <h5>2. Realizar la siguiente figura por medio del ciclo Mientras - Hacer</h5>
+        <div class="codigo">
+            <pre>
+                Proceso Ejercicio2
+	
+                    Definir contador1 Como Entero;
+                    Definir contador2 Como Entero;
+                    Definir estrella Como Caracter;
+                    Definir espacio Como Caracter;
+                    Definir n Como Entero;
+                    
+                    contador1 <- 0;
+                    contador2 <- 0;
+                    n <- 9;
+                    espacio <- " ";
+                    estrella <- " ";
+                    
+                    Mientras contador1 < 10 Hacer 
+                        Mientras contador2 < n Hacer
+                            Escribir Sin Saltar espacio;
+                            contador2 <- contador2 + 1;
+                        FinMientras
+                        n <- n - 1;
+                        contador2 <- 0;
+                        estrella <- Concatenar(estrella,"*");
+                        Escribir Sin Saltar estrella;
+                        Escribir " ";
+                        contador1 <- contador1 + 1;
+                        
+                    FinMientras
+                    
+                FinProceso    
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 3</h3>
+        <h5>3. Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que</h5>
+        <div class="codigo">
+            <pre>
+                Proceso Ejercicio3
+	
+                    Definir i, j, n, k, l, m Como entero;
+                    Definir estrella, estrella2,estrella3, estrella4, espacio Como Caracter;
+                    
+                    estrella <- "";
+                    estrella2 <- "";
+                    espacio <- " ";
+                    i <- 0;
+                    j <- 0;
+                    n <- 10;
+                    estrella3 <- "*";
+                    estrella4 <- "";
+                    k <- 0;
+                    l <- 0;
+                    m <- 9;
+                    
+                    Repetir
+                        Repetir
+                            escribir Sin Saltar espacio;
+                            j <- j + 1;
+                        Hasta Que j > n;
+                            n <- n - 1;
+                            estrella <- Concatenar("*",estrella);
+                            Escribir estrella,estrella2;
+                            estrella2 <- Concatenar(estrella2,"*");
+                            i <- i + 1;
+                            j <- 0;
+                        Hasta Que i = 11;
+                        
+                        Escribir "          ***          ";
+                        
+                    Repetir
+                        Repetir
+                            escribir Sin Saltar espacio;
+                            l <- l + 1;
+                        Hasta Que l > m;
+                            m <- m - 1;
+                            estrella3 <- Concatenar("**",estrella3);
+                            Escribir estrella4,estrella3;
+                            k <- k + 1;
+                            l <- 0;
+                    Hasta Que k = 3;
+                    
+                FinProceso      
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 4</h3>
+        <h5>4. Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por medio del ciclo Para;
+            esta debe
+            ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea crear la tabla del 5, entonces el resultado debería ser
+            el siguiente:</h5>
+        <div class="codigo">
+            <pre>
+                Proceso Ejercicio4
+	
+                    Definir numeroTabla, i, resultado Como Entero;
+                    
+                    Escribir Sin Saltar "Digite el numero, del que desea la tabla de multiplicar: ";
+                    Leer numeroTabla;
+                    
+                    Para i <- 1 Hasta 10 Con Paso 1 Hacer
+                        resultado <- i * numeroTabla;
+                        Escribir i, " X ", numeroTabla, " = ", resultado;
+                    FinPara
+                    
+                FinProceso         
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 5</h3>
+        <h5>5. Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.</h5>
+        <div class="codigo">
+            <pre>
+                Proceso Ejercicio5
+	
+                    Definir nombre, salir Como Caracter;
+                    Definir opcion Como Entero;
+                    
+                    nombre <- "x";
+                    
+                    Repetir
+                        Escribir "Menu de usuario";
+                        Escribir "1. Captura nombre";
+                        Escribir "2. Saludar persona";
+                        Escribir "3. Salir del sistema";
+                        Leer opcion;
+                        
+                        Si opcion = 1 Entonces
+                            Escribir Sin Saltar "Digite su nombre: ";
+                            Leer nombre;
+                            Escribir " ";
+                        SiNo
+                            si opcion = 2 Entonces
+                                si nombre = "x" Entonces
+                                    Escribir "En el menu de usuario digite su nombre para saludarlo";
+                                SiNo
+                                    Escribir "Hola", " ",nombre, " como esta!!!";
+                                FinSi
+                                Escribir " ";
+                            FinSi
+                        FinSi
+                        
+                    Hasta Que opcion = 3
+                    
+                FinProceso            
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 6</h3>
+        <h5>6. Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el
+            dispositivo. Para ello cada contacto debe contener
+            nombre completo, teléfono y organización. Se requiere que la aplicación
+            permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y
+            eliminar contactos si
+            el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.</h5>
+        <div class="codigo">
+            <pre>
+                Proceso Ejercicio6
+	
+                    Definir opcion, contactos, numero1, numero2, numero3 Como Entero;
+                    Definir nombre1, nombre2, nombre3, organizacion1, organizacion2, organizacion3 Como Caracter;
+
+
+                    numero1 <- 0;
+                    numero2 <- 1;
+                    numero3 <- 2;
+                    nombre1 <- "";
+                    nombre2 <- "";
+                    nombre3 <- "";
+                    organizacion1 <- "";
+                    organizacion2 <- "";
+                    organizacion3 <- "";
+                    
+                    Repetir
+                        
+                        Escribir "_______________________";
+                        Escribir "#Contactos Telefonicos#";
+                        Escribir "-----------------------";
+                        Escribir "1. Añadir contacto";
+                        Escribir "2. Buscar contactos ";
+                        Escribir "3. Eliminar contacto";
+                        Escribir "4. Salir del sistema";
+                        Leer opcion;
+                        
+                        Segun opcion Hacer
+                            1://añadir contactos
+                            Escribir "Seleccione el espacio donde desea almacenar el contacto";
+                            Escribir "1. contacto"," ",nombre1;
+                            Escribir "2. contacto"," ",nombre2;
+                            Escribir "3. contacto"," ",nombre3;
+                            Escribir "4. Salir al menu principal";
+                            Leer contactos;
+                            
+                            Segun contactos hacer
+                                1:
+                                //añadir contacto1
+                                Escribir "Digite los datos para agregar contacto";
+                                Escribir Sin Saltar "Digite su nombre completo:";
+                                Leer nombre1;
+                                Escribir Sin Saltar "Digite la organizacion del contacto";
+                                Leer organizacion1;
+                                Escribir Sin Saltar "Digite el numero de contacto";
+                                Leer numero1;
+                                Escribir numero1," ", numero2," ", numero3;
+                                
+                                si numero1 = numero2 o numero1 = numero3 Entonces
+                                    Escribir "numero ya se encuentra registrado";
+                                    Escribir Sin Saltar "digite otro numero de contacto:";
+                                    Leer numero1;
+                                SiNo
+                                    Si numero2 = numero1 o numero2 = numero3 Entonces
+                                        Escribir "numero ya se encuentra registrado";
+                                        Escribir Sin Saltar "digite otro numero de contacto:";
+                                        Leer numero1;
+                                    SiNo
+                                        Si numero3 = numero1 o numero3 = numero2 Entonces
+                                            Escribir "numero ya se encuentra registrado";
+                                            Escribir Sin Saltar "digite otro numero de contacto:";
+                                            Leer numero1;
+                                        SiNo
+                                            Escribir "Contacto guardado exitosamente";
+                                        FinSi
+                                    FinSi
+                                FinSi
+                                
+                                2:
+                                //añadir contacto2
+                                Escribir "Digite los datos para agregar contacto";
+                                Escribir Sin Saltar "Digite su nombre completo:";
+                                Leer nombre2;
+                                Escribir Sin Saltar "Digite la organizacion del contacto";
+                                Leer organizacion2;
+                                Escribir Sin Saltar "Digite el numero de contacto";
+                                Leer numero2;
+                                Escribir numero1," ", numero2," ", numero3;
+                                
+                                si numero1 = numero2 o numero1 = numero3 Entonces
+                                    Escribir "numero ya se encuentra registrado";
+                                    Escribir Sin Saltar "digite otro numero de contacto:";
+                                    Leer numero2;
+                                SiNo
+                                    Si numero2 = numero1 o numero2 = numero3 Entonces
+                                        Escribir "numero ya se encuentra registrado";
+                                        Escribir Sin Saltar "digite otro numero de contacto:";
+                                        Leer numero2;
+                                    SiNo
+                                        Si numero3 = numero1 o numero3 = numero2 Entonces
+                                            Escribir "numero ya se encuentra registrado";
+                                            Escribir Sin Saltar "digite otro numero de contacto:";
+                                            Leer numero2;
+                                        SiNo
+                                            Escribir "Contacto guardado exitosamente";
+                                        FinSi
+                                    FinSi
+                                FinSi
+                                
+                                3:
+                                //añadir contacto3
+                                Escribir "Digite los datos para agregar contacto";
+                                Escribir Sin Saltar "Digite su nombre completo:";
+                                Leer nombre3;
+                                Escribir Sin Saltar "Digite la organizacion del contacto";
+                                Leer organizacion3;
+                                Escribir Sin Saltar "Digite el numero de contacto";
+                                Leer numero3;
+                                Escribir " ";
+                                
+                                si numero1 = numero2 o numero1 = numero3 Entonces
+                                    Escribir "numero ya se encuentra registrado";
+                                    Escribir Sin Saltar "digite otro numero de contacto:";
+                                    Leer numero3;
+                                SiNo
+                                    Si numero2 = numero1 o numero2 = numero3 Entonces
+                                        Escribir "numero ya se encuentra registrado";
+                                        Escribir Sin Saltar "digite otro numero de contacto:";
+                                        Leer numero3;
+                                    SiNo
+                                        Si numero3 = numero1 o numero3 = numero2 Entonces
+                                            Escribir "numero ya se encuentra registrado";
+                                            Escribir Sin Saltar "digite otro numero de contacto:";
+                                            Leer numero3;
+                                        SiNo
+                                            Escribir "Contacto guardado exitosamente!!!";
+                                        FinSi
+                                    FinSi
+                                FinSi
+                                
+                                De Otro Modo:
+                                    Escribir "Elija la opcion correcta!!!";
+                                    
+                            FinSegun
+                            
+                            2://buscar contactos
+                            
+                            Escribir "Lista de contactos";
+                            Escribir "1."," ",nombre1;
+                            Escribir "2."," ",nombre2;
+                            Escribir "3."," ",nombre3;
+                            Escribir "4. Salir al menu principal";
+                            Leer contactos;
+                        
+                            Segun contactos Hacer
+                                1:
+                                    Escribir "nombre de contacto:", " ", nombre1;
+                                    Escribir "organizacion:", " ", organizacion1;
+                                    Escribir "numero de contacto:", " ", numero1;
+                                    
+                                2:
+                                    Escribir "nombre de contacto:", " ", nombre2;
+                                    Escribir "organizacion:", " ", organizacion2;
+                                    Escribir "numero de contacto:", " ", numero2;
+                                    
+                                3:
+                                    Escribir "nombre de contacto:", " ", nombre3;
+                                    Escribir "organizacion:", " ", organizacion3;
+                                    Escribir "numero de contacto:", " ", numero3;
+                                    
+                                4: 
+                                    Escribir " ";
+                                    
+                                    De Otro Modo:
+                                    Escribir "Elija la opcion correcta!!!";
+                                    
+                            FinSegun
+                            
+                            3://Eliminar contactos
+                            
+                            Escribir "Lista de contactos";
+                            Escribir "Seleccione el contacto que desea eliminar";
+                            Escribir "1."," ",nombre1;
+                            Escribir "2."," ",nombre2;
+                            Escribir "3."," ",nombre3;
+                            Escribir "4. Salir al menu principal";
+                            Leer contactos;	
+                            
+                            segun contactos hacer
+                                1:
+                                    nombre1 <- " ";
+                                    organizacion1 <- " ";
+                                    numero1 <- 0;
+                                    Escribir "Datos de contacto eliminados";
+                                    
+                                2: 
+                                    nombre2 <- " ";
+                                    organizacion2 <- " ";
+                                    numero2 <- 1;
+                                    Escribir "Datos de contacto eliminados";
+                                    
+                                3: 
+                                    nombre3 <- " ";
+                                    organizacion3 <- " ";
+                                    numero3 <- 2;
+                                    Escribir "Datos de contacto eliminados";
+                                    
+                                4: 
+                                    Escribir " ";
+                                    
+                                De Otro Modo:
+                                    Escribir Sin Saltar "Elija la opcion correcta!!!";
+                                    
+                            FinSegun
+                            
+                        FinSegun
+                                
+                    Hasta Que opcion = 4;
+                    
+                FinProceso                
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 7</h3>
+        <h5>7. El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación
+            que permita registrar los vehículos que se
+            cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del
+            vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de
+            teléfono. Para cada vehículo
+            se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el
+            parqueadero. Recuerde que
+            el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero
+            solo puede almacenar máximo 5 vehículos.</h5>
+        <div class="codigo">
+            <pre>
+                Proceso Ejercicio7
+	
+                    
+                    Definir opcion, ingresoVehiculo, consultaVehiculo, retirarVehiculo, numero1, numero2, numero3, numero4, numero5 Como Entero;
+                    Definir nombre1, nombre2, nombre3, nombre4, nombre5, marca1, marca2, marca3, marca4, marca5, placa1, placa2, placa3, placa4, placa5 Como Caracter;
+                    
+                    placa1 <- "";
+                    placa2 <- "";
+                    placa3 <- "";
+                    placa4 <- "";
+                    placa5 <- "";
+                    numero1 <- 0;
+                    numero2 <- 0;
+                    numero3 <- 0;
+                    numero4 <- 0;
+                    numero5 <- 0;
+                    marca1 <- "";
+                    marca2 <- "";
+                    marca3 <- "";
+                    marca4 <- "";
+                    marca5 <- "";
+                    nombre1 <- "";
+                    nombre2 <- "";
+                    nombre3 <- "";
+                    nombre4 <- "";
+                    nombre5 <- "";
+                    
+                    
+                    Repetir
+                        
+                        Escribir "_______________________";
+                        Escribir "Parqueadero el Guardian";
+                        Escribir "-----------------------";
+                        Escribir "1. Ingresar vehiculo";
+                        Escribir "2. consulta de vehiculos";
+                        Escribir "3. Retirar vehiculo";
+                        Escribir "4. Salir del sistema";
+                        Leer opcion;
+                        
+                        Segun opcion Hacer
+                            1:
+                                Escribir "Escoja el espacio para su vehiculo";
+                                Escribir "1."," ", marca1;
+                                Escribir "2."," ", marca2;
+                                Escribir "3."," ", marca3;
+                                Escribir "4."," ", marca4;
+                                Escribir "5."," ", marca5;
+                                Escribir "6. Salir al menu principal";
+                                Leer ingresoVehiculo;
+                                
+                                Segun ingresoVehiculo Hacer
+                                    1:
+                                        Escribir "Digite la placa de su vehiculo";
+                                        Leer placa1;
+                                        Escribir "Digite la marca de su vehiculo";
+                                        Leer marca1;
+                                        Escribir "Digite su nombre completo";
+                                        Leer nombre1;
+                                        Escribir "Digite su numero de telefono";
+                                        Leer numero1;
+                                        Escribir "";
+                                        Escribir "Bienvenido"," ",nombre1, " puede ingresar su vehiculo"," ",marca1," de placa", " ",placa1, " en el espacio#1";
+                                    2:
+                                        Escribir "Digite la placa de su vehiculo";
+                                        Leer placa2;
+                                        Escribir "Digite la marca de su vehiculo";
+                                        Leer marca2;
+                                        Escribir "Digite su nombre completo";
+                                        Leer nombre2;
+                                        Escribir "Digite su numero de telefono";
+                                        Leer numero2;
+                                        Escribir "";
+                                        Escribir "Bienvenido"," ",nombre2, " puede ingresar su vehiculo"," ",marca2," de placa", " ",placa2, " en el espacio#2";
+                                    3:
+                                        Escribir "Digite la placa de su vehiculo";
+                                        Leer placa3;
+                                        Escribir "Digite la marca de su vehiculo";
+                                        Leer marca3;
+                                        Escribir "Digite su nombre completo";
+                                        Leer nombre3;
+                                        Escribir "Digite su numero de telefono";
+                                        Leer numero3;
+                                        Escribir "";
+                                        Escribir "Bienvenido"," ",nombre3, " puede ingresar su vehiculo"," ",marca3," de placa", " ",placa3, " en el espacio#3";
+                                    4:
+                                        Escribir "Digite la placa de su vehiculo";
+                                        Leer placa4;
+                                        Escribir "Digite la marca de su vehiculo";
+                                        Leer marca4;
+                                        Escribir "Digite su nombre completo";
+                                        Leer nombre4;
+                                        Escribir "Digite su numero de telefono";
+                                        Leer numero4;
+                                        Escribir "";
+                                        Escribir "Bienvenido"," ",nombre4, " puede ingresar su vehiculo"," ",marca4," de placa", " ",placa4, " en el espacio#4";
+                                    5:
+                                        Escribir "Digite la placa de su vehiculo";
+                                        Leer placa5;
+                                        Escribir "Digite la marca de su vehiculo";
+                                        Leer marca5;
+                                        Escribir "Digite su nombre completo";
+                                        Leer nombre5;
+                                        Escribir "Digite su numero de telefono";
+                                        Leer numero5;
+                                        Escribir "";
+                                        Escribir "Bienvenido"," ",nombre5, " puede ingresar su vehiculo"," ",marca5," de placa", " ",placa5, " en el espacio#1";
+                                    6:
+                                        Escribir " ";
+                                        
+                                    De Otro Modo:
+                                        Escribir "";
+                                        Escribir "Elija la opcion correcta";
+                                        
+                                FinSegun
+                                
+                            2:
+                                Escribir "Estado actual del parqueadero";
+                                Escribir "1.",marca1," ",placa1;
+                                Escribir "2.",marca2," ",placa2;
+                                Escribir "3.",marca3," ",placa3;
+                                Escribir "4.",marca4," ",placa4;
+                                Escribir "5.",marca5," ",placa5;
+                                Escribir "6. Salir al menu principal";
+                                Leer consultaVehiculo;
+                                
+                                Segun consultaVehiculo Hacer
+                                    1:
+                                        si numero1 = 0 Entonces
+                                            Escribir "Espacio disponible";
+                                        SiNo
+                                            Escribir "Espacio#1 ocupado por el vehiculo"," ", marca1," ","de placa"," ",placa1;
+                                            Escribir "El cual esta a nombre de"," ",nombre1;
+                                            Escribir "numero de contacto:"," ",numero1;
+                                        FinSi
+                                        
+                                    2:
+                                        Si numero2 = 0 Entonces
+                                            Escribir "Espacio disponible";
+                                        SiNo
+                                            Escribir "Espacio#2 ocupado por el vehiculo"," ", marca2," ","de placa"," ",placa2;
+                                            Escribir "El cual esta a nombre de"," ",nombre2;
+                                            Escribir "numero de contacto:"," ",numero2;
+                                        FinSi
+                                        
+                                    3:
+                                        Si numero3 = 0 Entonces
+                                            Escribir "Espacio disponible";
+                                        SiNo
+                                            Escribir "Espacio#3 ocupado por el vehiculo"," ", marca3," ","de placa"," ",placa3;
+                                            Escribir "El cual esta a nombre de"," ",nombre3;
+                                            Escribir "numero de contacto:"," ",numero3;
+                                        FinSi
+                                        
+                                    4:
+                                        Si numero4 = 0 Entonces
+                                            Escribir "Espacio disponible";
+                                        SiNo
+                                            Escribir "Espacio#4 ocupado por el vehiculo"," ", marca4," ","de placa"," ",placa4;
+                                            Escribir "El cual esta a nombre de"," ",nombre4;
+                                            Escribir "numero de contacto:"," ",numero4;
+                                        FinSi
+                                        
+                                    5:
+                                        Si numero5 = 0 Entonces
+                                            Escribir "Espacio disponible";
+                                        SiNo
+                                            Escribir "Espacio#5 ocupado por el vehiculo"," ", marca5," ","de placa"," ",placa5;
+                                            Escribir "El cual esta a nombre de"," ",nombre5;
+                                            Escribir "numero de contacto:"," ",numero5;
+                                        FinSi
+                                        
+                                    6:
+                                        Escribir "";
+                                    De Otro Modo:
+                                        Escribir "";
+                                        Escribir "Elija la opcion correcta";
+                                        
+                                FinSegun
+                                
+                            3:
+                                Escribir "Escoja el espacio del vehiculo que desea retirar";
+                                Escribir "1.",marca1," ",placa1;
+                                Escribir "2.",marca2," ",placa2;
+                                Escribir "3.",marca3," ",placa3;
+                                Escribir "4.",marca4," ",placa4;
+                                Escribir "5.",marca5," ",placa5;
+                                Escribir "6. Salir al menu principal";
+                                Leer retirarVehiculo;
+                                
+                                Segun retirarVehiculo Hacer
+                                    1:
+                                        marca1 <- "";
+                                        placa1 <- "";
+                                        nombre1 <- "";
+                                        numero1 <- 0;
+                                        Escribir "Puede retirar su vehiculo";
+                                        Escribir "Parqueadero el Guardian encantado de prestarle sus servicios";
+                                    2:
+                                        marca2 <- "";
+                                        placa2 <- "";
+                                        nombre2 <- "";
+                                        numero2 <- 0;
+                                        Escribir "Puede retirar su vehiculo";
+                                        Escribir "Parqueadero el Guardian encantado de prestarle sus servicios";
+                                    3:
+                                        marca3 <- "";
+                                        placa3 <- "";
+                                        nombre3 <- "";
+                                        numero3 <- 0;
+                                        Escribir "Puede retirar su vehiculo";
+                                        Escribir "Parqueadero el Guardian encantado de prestarle sus servicios";
+                                    4:
+                                        marca4 <- "";
+                                        placa4 <- "";
+                                        nombre4 <- "";
+                                        numero4 <- 0;
+                                        Escribir "Puede retirar su vehiculo";
+                                        Escribir "Parqueadero el Guardian encantado de prestarle sus servicios";
+                                    5:
+                                        marca5 <- "";
+                                        placa5 <- "";
+                                        nombre5 <- "";
+                                        numero5 <- 0;
+                                        Escribir "Puede retirar su vehiculo";
+                                        Escribir "Parqueadero el Guardian encantado de prestarle sus servicios";
+                                    6:
+                                        Escribir "";
+                                        
+                                    De Otro Modo:
+                                        Escribir "";
+                                        Escribir "Elija la opcion correcta";
+                                        
+                                FinSegun
+                                
+                        FinSegun
+                        
+                    Hasta Que opcion = 4;
+                    
+                FinProceso                 
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 8</h3>
+        <h5>8. La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza
+            automovilística y establecer quienes lo han
+            aprobado para continuar con el trámite de adquirir la licencia de conducción. Para
+            cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan
+            presentado el curso y resultados de la
+            prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga
+            presente que la
+            escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.</h5>
+        <div class="codigo">
+            <pre>
+                Proceso Ejercicio8
+	
+                    Definir opcion, registroUsuario, usuarioActivo, calificacionUsuario Como Entero;
+                    Definir usuario1, usuario2, usuario3, usuario4, usuario5, usuario6, usuario7, usuario8 Como Caracter;
+                    Definir calificacion1, calificacion2, calificacion3, calificacion4, calificacion5, calificacion6, calificacion7, calificacion8 Como Caracter;
+                    
+                    usuario1 <- "";
+                    usuario2 <- "";
+                    usuario3 <- "";
+                    usuario4 <- "";
+                    usuario5 <- "";
+                    usuario6 <- "";
+                    usuario7 <- "";
+                    usuario8 <- "";
+                    calificacion1 <- "";
+                    calificacion2 <- "";
+                    calificacion3 <- "";
+                    calificacion4 <- "";
+                    calificacion5 <- "";
+                    calificacion6 <- "";
+                    calificacion7 <- "";
+                    calificacion8 <- "";
+                    
+                    
+                    
+                    Repetir
+                        
+                        Escribir "____________________________________";
+                        Escribir "Escuela automovilistica - El Maestro";
+                        Escribir "------------------------------------";
+                        Escribir "1. Ingresar usuario al curso";
+                        Escribir "2. Consultar usuarios activos";
+                        Escribir "3. Resultados de la prueba";
+                        Escribir "4. Salir del sistema";
+                        Leer opcion;
+                        
+                        Segun opcion Hacer
+                            1:
+                                Escribir "Elija donde quiere registrar el usuario";
+                                Escribir "1."," ",usuario1;
+                                Escribir "2."," ",usuario2;
+                                Escribir "3."," ",usuario3;
+                                Escribir "4."," ",usuario4;
+                                Escribir "5."," ",usuario5;
+                                Escribir "6."," ",usuario6;
+                                Escribir "7."," ",usuario7;
+                                Escribir "8."," ",usuario8;
+                                Escribir "9. Salir al menu principal";
+                                Leer registroUsuario;
+                                
+                                segun registroUsuario Hacer
+                                    1:
+                                        Escribir "Digite nombre completo del usuario";
+                                        Leer usuario1;
+                                        Escribir "Digite si el usuario fue aprobado o no";
+                                        Leer calificacion1;
+                                    2:
+                                        Escribir "Digite nombre completo del usuario";
+                                        Leer usuario2;
+                                        Escribir "Digite si el usuario fue aprobado o no";
+                                        Leer calificacion2;
+                                    3:
+                                        Escribir "Digite nombre completo del usuario";
+                                        Leer usuario3;
+                                        Escribir "Digite si el usuario fue aprobado o no";
+                                        Leer calificacion3;
+                                    4:
+                                        Escribir "Digite nombre completo del usuario";
+                                        Leer usuario4;
+                                        Escribir "Digite si el usuario fue aprobado o no";
+                                        Leer calificacion4;
+                                    5:
+                                        Escribir "Digite nombre completo del usuario";
+                                        Leer usuario5;
+                                        Escribir "Digite si el usuario fue aprobado o no";
+                                        Leer calificacion5;
+                                    6:
+                                        Escribir "Digite nombre completo del usuario";
+                                        Leer usuario6;
+                                        Escribir "Digite si el usuario fue aprobado o no";
+                                        Leer calificacion6;
+                                    7:
+                                        Escribir "Digite nombre completo del usuario";
+                                        Leer usuario7;
+                                        Escribir "Digite si el usuario fue aprobado o no";
+                                        Leer calificacion7;
+                                    8:
+                                        Escribir "Digite nombre completo del usuario";
+                                        Leer usuario8;
+                                        Escribir "Digite si el usuario fue aprobado o no";
+                                        Leer calificacion8;
+                                    9:
+                                        Escribir "";
+                                    De Otro Modo:
+                                        Escribir "";
+                                        Escribir "Elija la opcion correcta";
+                                FinSegun
+                                
+                            2:
+                                Escribir "lista de usuarios";
+                                Escribir "1."," ",usuario1;
+                                Escribir "2."," ",usuario2;
+                                Escribir "3."," ",usuario3;
+                                Escribir "4."," ",usuario4;
+                                Escribir "5."," ",usuario5;
+                                Escribir "6."," ",usuario6;
+                                Escribir "7."," ",usuario7;
+                                Escribir "8."," ",usuario8;
+                                Escribir "9. Salir al menu principal";
+                                Leer usuarioActivo;
+                                
+                                Segun usuarioActivo Hacer
+                                    1:
+                                        Si usuario1 = "" Entonces
+                                            Escribir "No se encuentra usuario, espacio disponible para ingresar nuevo";
+                                        SiNo
+                                            Escribir "El usuario"," ",usuario1," se encuentra activo";
+                                        FinSi
+                                    2:
+                                        Si usuario2 = "" Entonces
+                                            Escribir "No se encuentra usuario, espacio disponible para ingresar nuevo";
+                                        SiNo
+                                            Escribir "El usuario"," ",usuario2," se encuentra activo";
+                                        FinSi
+                                    3:
+                                        Si usuario3 = "" Entonces
+                                            Escribir "No se encuentra usuario, espacio disponible para ingresar nuevo";
+                                        SiNo
+                                            Escribir "El usuario"," ",usuario3," se encuentra activo";
+                                        FinSi
+                                    4:
+                                        Si usuario4 = "" Entonces
+                                            Escribir "No se encuentra usuario, espacio disponible para ingresar nuevo";
+                                        SiNo
+                                            Escribir "El usuario"," ",usuario4," se encuentra activo";
+                                        FinSi
+                                    5:
+                                        Si usuario5 = "" Entonces
+                                            Escribir "No se encuentra usuario, espacio disponible para ingresar nuevo";
+                                        SiNo
+                                            Escribir "El usuario"," ",usuario5," se encuentra activo";
+                                        FinSi
+                                    6:
+                                        Si usuario6 = "" Entonces
+                                            Escribir "No se encuentra usuario, espacio disponible para ingresar nuevo";
+                                        SiNo
+                                            Escribir "El usuario"," ",usuario6," se encuentra activo";
+                                        FinSi
+                                    7:
+                                        Si usuario7 = "" Entonces
+                                            Escribir "No se encuentra usuario, espacio disponible para ingresar nuevo";
+                                        SiNo
+                                            Escribir "El usuario"," ",usuario7," se encuentra activo";
+                                        FinSi
+                                    8:
+                                        Si usuario8 = "" Entonces
+                                            Escribir "No se encuentra usuario, espacio disponible para ingresar nuevo";
+                                        SiNo
+                                            Escribir "El usuario"," ",usuario8," se encuentra activo";
+                                        FinSi
+                                    9:
+                                        Escribir "";
+                                    De Otro Modo:
+                                        Escribir "";
+                                        Escribir "Elija la opcion correcta";
+                                FinSegun
+                                
+                            3:
+                                Escribir "Lista de calificaciones";
+                                Escribir "1."," ",usuario1;
+                                Escribir "2."," ",usuario2;
+                                Escribir "3."," ",usuario3;
+                                Escribir "4."," ",usuario4;
+                                Escribir "5."," ",usuario5;
+                                Escribir "6."," ",usuario6;
+                                Escribir "7."," ",usuario7;
+                                Escribir "8."," ",usuario8;
+                                Escribir "9. Salir al menu principal";
+                                Leer calificacionUsuario;
+                                
+                                Segun calificacionUsuario Hacer
+                                    1:
+                                        Si calificacion1 = "" Entonces
+                                            Escribir "No se encuentra registro";
+                                        SiNo
+                                            Si calificacion1 = "aprobado" Entonces
+                                                Escribir "La calificacion del usuario"," ",usuario1," es:"," ",calificacion1;
+                                                Escribir "El usuario puede seguir con el tramite de su licencia";
+                                            SiNo
+                                                Escribir "El usuario debe repetir la prueba del curso";
+                                            FinSi
+                                        FinSi
+                                        
+                                    2:
+                                        Si calificacion2 = "" Entonces
+                                            Escribir "No se encuentra registro";
+                                        SiNo
+                                            Si calificacion2 = "aprobado" Entonces
+                                                Escribir "La calificacion del usuario"," ",usuario2," es:"," ",calificacion2;
+                                                Escribir "El usuario puede seguir con el tramite de su licencia";
+                                            SiNo
+                                                Escribir "El usuario debe repetir la prueba del curso";
+                                            FinSi
+                                        FinSi
+                                    3:
+                                        Si calificacion3 = "" Entonces
+                                            Escribir "No se encuentra registro";
+                                        SiNo
+                                            Si calificacion3 = "aprobado" Entonces
+                                                Escribir "La calificacion del usuario"," ",usuario3," es:"," ",calificacion3;
+                                                Escribir "El usuario puede seguir con el tramite de su licencia";
+                                            SiNo
+                                                Escribir "El usuario debe repetir la prueba del curso";
+                                            FinSi
+                                        FinSi
+                                    4:
+                                        Si calificacion4 = "" Entonces
+                                            Escribir "No se encuentra registro";
+                                        SiNo
+                                            Si calificacion1 = "aprobado" Entonces
+                                                Escribir "La calificacion del usuario"," ",usuario4," es:"," ",calificacion4;
+                                                Escribir "El usuario puede seguir con el tramite de su licencia";
+                                            SiNo
+                                                Escribir "El usuario debe repetir la prueba del curso";
+                                            FinSi
+                                        FinSi
+                                    5:
+                                        Si calificacion5 = "" Entonces
+                                            Escribir "No se encuentra registro";
+                                        SiNo
+                                            Si calificacion1 = "aprobado" Entonces
+                                                Escribir "La calificacion del usuario"," ",usuario5," es:"," ",calificacion5;
+                                                Escribir "El usuario puede seguir con el tramite de su licencia";
+                                            SiNo
+                                                Escribir "El usuario debe repetir la prueba del curso";
+                                            FinSi
+                                        FinSi
+                                    6:
+                                        Si calificacion6 = "" Entonces
+                                            Escribir "No se encuentra registro";
+                                        SiNo
+                                            Si calificacion6 = "aprobado" Entonces
+                                                Escribir "La calificacion del usuario"," ",usuario6," es:"," ",calificacion6;
+                                                Escribir "El usuario puede seguir con el tramite de su licencia";
+                                            SiNo
+                                                Escribir "El usuario debe repetir la prueba del curso";
+                                            FinSi
+                                        FinSi
+                                    7:
+                                        Si calificacion7 = "" Entonces
+                                            Escribir "No se encuentra registro";
+                                        SiNo
+                                            Si calificacion7 = "aprobado" Entonces
+                                                Escribir "La calificacion del usuario"," ",usuario7," es:"," ",calificacion7;
+                                                Escribir "El usuario puede seguir con el tramite de su licencia";
+                                            SiNo
+                                                Escribir "El usuario debe repetir la prueba del curso";
+                                            FinSi
+                                        FinSi
+                                    8:
+                                        Si calificacion8 = "" Entonces
+                                            Escribir "No se encuentra registro";
+                                        SiNo
+                                            Si calificacion8 = "aprobado" Entonces
+                                                Escribir "La calificacion del usuario"," ",usuario8," es:"," ",calificacion8;
+                                                Escribir "El usuario puede seguir con el tramite de su licencia";
+                                            SiNo
+                                                Escribir "El usuario debe repetir la prueba del curso";
+                                            FinSi
+                                        FinSi
+                                    9:
+                                        Escribir "";
+                                    De Otro Modo:
+                                        Escribir "";
+                                        Escribir "Elija la opcion correcta";
+                                        
+                                FinSegun
+                                
+                            4:
+                                Escribir "";
+                                
+                            De Otro Modo:
+                                Escribir "";
+                                Escribir "Elija la opcion correcta";
+                                
+                        FinSegun
+                                
+                    Hasta Que opcion = 4;
+                    
+                FinProceso                     
+            </pre>
+        </div>    
+    </section>
+    <br>
+    
+    <h2>
+        <a href="../html/pseint.html">REGRESAR</a>
+    </h2>
+    <script src="/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2>Taller #2</h2>
+    <div class="video">
+        <figure>
+            <img src="/img/arbol.gif" width="300">
+        </figure> 
+    </div>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 1</h3>
+        <h5>1.Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, debera mostrar en pantalla: usted es mayor de edad.</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio1_Condicionales {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        int edad;
+
+                        System.out.println("Digite su edad: ");
+                        edad = Integer.parseInt(input.nextLine());
+
+                        if (edad >= 18){
+                            System.out.println("Usted es mayor de edad");
+                        }
+                    }
+                }                
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 2</h3>
+        <h5>2. Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18
+            años, deberá mostrar en pantalla: Usted aún es un niño(a).</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio2_Condicionales {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        int edad;
+
+                        System.out.println("Digite su edad: ");
+                        edad = Integer.parseInt(input.nextLine());
+
+                        if (edad <= 18){
+                            System.out.println("Usted aun es un niño");
+                        }
+                    }
+                }                  
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 3</h3>
+        <h5>3. Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la
+            persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla
+            [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de
+            la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede
+            entrar a la fiesta, por favor devuélvase a su casa.</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio3_Condicionales {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        String nombre, apellidos;
+                        int edad;
+
+                        System.out.print("Digite su nombre: ");
+                        nombre = input.nextLine();
+                        System.out.print("Digite sus apellidos: ");
+                        apellidos = input.nextLine();
+                        System.out.print("Digite su edad: ");
+                        edad = Integer.parseInt(input.nextLine());
+
+                        if (edad >= 18){
+                            System.out.println(nombre+" "+apellidos+" usted es mayor de edad, por lo tanto puede entrar a la fiesta. ");
+                        }
+                        else{
+                            System.out.println(nombre+" "+apellidos+" usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuelvase a su casa. ");
+                        }
+                    }
+                }                     
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 4</h3>
+        <h5>4. La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el
+            Porvenir, requiere de una aplicación que permita registrar el alquiler de las
+            películas que
+            adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar
+            película, consultar películas disponibles y recibir película en la video
+            tienda con la opción de
+            realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio4_Condicionales {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        int opcion, consultarCatalogo, metodoEnvio;
+                        String alquilarPelicula, novedad, domicilio;
+
+                        System.out.println("BIENVENIDO A LA VIDEO TIENDA");
+                        System.out.println("1. CATALOGO");
+                        System.out.println("2. ALQUILAR PELICULA");
+                        System.out.println("3. METODOS DE ENVIO");
+                        System.out.println("4. REPORTE DE NOVEDADES");
+                        opcion = Integer.parseInt(input.nextLine());
+                        System.out.println(opcion);
+
+                        switch (opcion){
+                            case 1:
+                                System.out.println("Este es el catalogo disponible en este momento: ");
+                                System.out.println("1. RAPIDOS Y FURIOSOS");
+                                System.out.println("2. SPIDERMAN");
+                                System.out.println("3. PAYASO IT");
+                                System.out.println("4. SUPER MAN");
+                                System.out.println("5. CHICAS MALAS");
+                                System.out.println("6. EL PADRINO");
+                                System.out.println("7. PARASITOS");
+                                System.out.println("8. TIBURON");
+                                System.out.println("9. LOS CAZAFANTASMAS");
+                                consultarCatalogo = Integer.parseInt(input.nextLine());
+                                System.out.println(consultarCatalogo);
+
+                                if (consultarCatalogo >= 1 && consultarCatalogo <= 9){
+                                    System.out.println("Pelicula se encuentra en ingles y español.");
+                                }
+                                else{
+                                    System.out.println("No se cuenta con mas peliculas en este momento.");
+                                }
+                                break;
+
+                            case 2:
+                                System.out.println("Digite el nombre de la pelicula que desea alquilar");
+                                alquilarPelicula = input.nextLine();
+                                System.out.println("Pelicula: "+alquilarPelicula+" ,Su solicitud se encuentra en proceso...");
+                                System.out.println("Ingrese a metodos de envio para finalizar el alquiler");
+                                break;
+
+                            case 3:
+                                System.out.println("Elija el metodo de envio");
+                                System.out.println("1. Domicilio");
+                                System.out.println("2. Recibir pelicula en la video tienda");
+                                metodoEnvio = Integer.parseInt(input.nextLine());
+                                System.out.println(metodoEnvio);
+
+                                if (metodoEnvio == 1){
+                                    System.out.println("Digite su direccion de domicilio");
+                                    domicilio = input.nextLine();
+                                    System.out.println("su direccion es: "+domicilio);
+                                }
+                                else if (metodoEnvio == 2){
+                                    System.out.println("En caja puede recibir su pelicula.");
+                                }
+                                else{
+                                    System.out.println("Opcion invalida!!!");
+                                }
+                                break;
+
+                            case 4:
+                                System.out.println("Digite la novedad que tiene sobre nuestros productos o servicio:");
+                                novedad = input.nextLine();
+                                System.out.println("novedad: "+novedad+" enviada!!!");
+                                System.out.println("En un momento atenderemos tu incorformidad");
+                                break;
+
+                            default:
+                                System.out.println("Opcion invalida!!!");
+
+                        }
+                    }
+                }                         
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 5</h3>
+        <h5>5. La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para
+            poder facturar los productos que vende a sus clientes y para ello, los
+            productos tienen unas
+            características que deben indicársele al cliente para que pueda escoger el producto a
+            comprar. Para cada cliente, se tienen las opciones de compra de
+            producto, consulta de precios
+            por producto y devoluciones en caso de que se presenten.</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio5_Condicionales {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        int opcion, consultaPrecios;
+                        String compraProducto, devoluciones;
+
+                        System.out.println("---DROGERIA MI SALUD---");
+                        System.out.println("1. PRODUCTOS");
+                        System.out.println("2. COMPRAR");
+                        System.out.println("3. DEVOLUCIONES");
+                        opcion = Integer.parseInt(input.nextLine());
+
+                        switch (opcion){
+                            case 1:
+                                System.out.println("Lista de precios para los productos en inventario");
+                                System.out.println("" +
+                                        "1. Acetaminofen x tableta, 10000 COP" +
+                                        "\n2. Aciclovir x tableta, 8000 COP" +
+                                        "\n3. Amoxicilina x tableta, 12000 COP" +
+                                        "\n4. Antiacido x unidad, 2500 COP" +
+                                        "\n5. Antidiarreico x 5 unidades, 20000 COP" +
+                                        "");
+                                consultaPrecios = Integer.parseInt(input.nextLine());
+
+                                if (consultaPrecios >= 1 && consultaPrecios <= 5){
+                                    System.out.println("" +
+                                            "El producto se encuentra para entrega inmediata" +
+                                            " ,En el menu principal puede realizar la compra.");
+                                }
+                                else{
+                                    System.out.println("Opcion invalida!!! Intento de nuevo");
+                                }
+                                break;
+
+                            case 2:
+                                System.out.println("Digite el producto que desea comprar:");
+                                compraProducto = input.nextLine();
+                                System.out.println("su producto es: "+compraProducto);
+                                System.out.println("En caja puede cancelar su prodcuto");
+                                break;
+
+                            case 3:
+                                System.out.println("Digite el producto que desea devolver:");
+                                devoluciones = input.nextLine();
+                                System.out.println("El producto es "+devoluciones+" ,en un momento atenderemos su solicitud");
+                                break;
+
+                            default:
+                                System.out.println("Opcion invalida!!!");
+                        }
+                    }
+                }                            
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 6</h3>
+        <h5>6. El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las
+            respectivas revisiones y requiere una aplicación que le permita registrar los
+            servicios generados a
+            sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones
+            por parte del cliente. También debe existir registro de
+            salida del taller con las novedades y otra
+            de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en
+            la motocicleta al entregarla.</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio6_Condicionales {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        int opcion;
+                        String marcaMoto, fecha, observacionesCliente, mantenimiento;
+
+                        System.out.println("---TALLER DE MOTOS ~ EL MAQUINISTA---");
+                        System.out.println(" " +
+                                "\n1. INGRESO MOTOCICLETA" +
+                                "\n2. RETIRO DE MOTOCICLETA" +
+                                "\n3. SALIR");
+                        opcion = Integer.parseInt(input.nextLine());
+
+                        switch (opcion){
+                            case 1:
+                                System.out.print("Digite los datos para realizar el ingreso de su motocicleta al taller");
+                                System.out.print("\nDigite la marca de su motocicleta: ");
+                                marcaMoto = input.nextLine();
+                                System.out.print("Digite la fecha de ingreso al taller: ");
+                                fecha = input.nextLine();
+                                System.out.print("Digite las observaciones del cliente: ");
+                                observacionesCliente = input.nextLine();
+                                System.out.println(" "+
+                                        "[ORDEN DE TRABAJO 001]" +
+                                        "\nMARCA: " +marcaMoto+
+                                        "\nFECHA DE INGRESO: " +fecha+
+                                        "\nDESCRIPCION DE MANTENIMIENTO: " +observacionesCliente);
+                                break;
+
+                            case 2:
+                                System.out.print("Digite los datos para realizar el retiro de su motocicleta");
+                                System.out.print("\nDigite la marca de su motocicleta: ");
+                                marcaMoto = input.nextLine();
+                                System.out.print("Digite la fecha de retiro del taller: ");
+                                fecha = input.nextLine();
+                                System.out.print("Digite el mantenimiento realizado por el tecnico: ");
+                                mantenimiento = input.nextLine();
+                                System.out.println(" "+
+                                        "[FICHA DE ENTREGA 001]" +
+                                        "\nMARCA: " +marcaMoto+
+                                        "\nFECHA DE RETIRO: " +fecha+
+                                        "\nDESCRIPCION DE MANTENIMIENTO: " +mantenimiento);
+                                break;
+
+                            case 3:
+                                System.out.println("Taller de motocicletas el MAQUINISTA, esta para atenderlo cuando lo necesite!!!");
+                                System.out.println("Vuelva pronto");
+                                break;
+
+                            default:
+                                System.out.println("Opcion invalida!!! Intente de nuevo" );
+                        }
+                    }
+                }                              
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 7</h3>
+        <h5>7. La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC
+            (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en
+            metros Para
+            cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para
+            cada uno y establecer en qué rango se encuentra (bajo peso, normal,
+            sobrepeso y obeso).</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio7_Condicionales {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        String nombre;
+                        int edad;
+                        double peso, estatura, imc;
+
+                        System.out.println("Digite su nombre completo: ");
+                        nombre = input.nextLine();
+                        System.out.println("Digite su edad: ");
+                        edad = Integer.parseInt(input.nextLine());
+                        System.out.println("Digite su peso en kilogramos: ");
+                        peso = Double.parseDouble(input.nextLine());
+                        System.out.println("Digite su estatura en metros: ");
+                        estatura = Double.parseDouble(input.nextLine());
+
+                        imc = peso / (Math.pow(estatura,2));
+                        System.out.println("Su indice de masa corporal es: "+imc);
+
+                        if (imc < 18.5){
+                            System.out.println("Su nivel de peso es BAJO");
+                        }
+                        else if (imc >= 18.5 && imc <= 24.9){
+                            System.out.println("Su nivel de peso es NORMAL");
+                        }
+                        else if (imc >= 25.0 && imc <= 29.9){
+                            System.out.println("Su nivel de peso es SOBREPESO");
+                        }
+                        else if (imc >= 30.0){
+                            System.out.println("Su nivel de peso es OBESO");
+                        }
+                    }
+                }                                     
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 8</h3>
+        <h5>8. El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le
+            permita registrar los pedidos de los clientes en cuanto a las tortas que realiza.
+            Cada torta tiene
+            unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que
+            la aplicación permita registrar los pedidos, las tortas disponibles
+            y las ventas que se registren
+            diariamente.</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio8_Condicionales {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        String registroPedido, tortasDisponibles, registroVenta, base, decoraciones;
+                        int opcion, porciones;
+
+                        System.out.println("---PASTELERIA DON CARLOS---");
+                        System.out.println(""+
+                                "1. Tortas Disponibles" +
+                                "\n2. Ingresar Pedido" +
+                                "\n3. Ingresar Venta");
+                        opcion = Integer.parseInt(input.nextLine());
+
+                        switch (opcion){
+                            case 1:
+                                System.out.println("SABORES BASE DISPONIBLES:"+
+                                        "\n-CHOCOLATE" +
+                                        "\n-LIMON" +
+                                        "\n-AREQUIPE" +
+                                        "\n-VAINILLA" +
+                                        "\n-VINO");
+                                base = input.nextLine();
+                                System.out.println("NUMERO DE PORCIONES:" +
+                                        "\n-8" +
+                                        "\n-10" +
+                                        "\n-12" +
+                                        "\n-14" +
+                                        "\n-16");
+                                porciones = Integer.parseInt(input.nextLine());
+                                System.out.println("DECORACIONES DISPONIBLES:" +
+                                        "\n-FRESAS Y CREMA CHATILLY" +
+                                        "\n-DURAZNO Y CHOCOLATE" +
+                                        "\n-NUTELLA Y FRESAS" +
+                                        "\n-CREMA DE MANI Y MORAS" +
+                                        "\n-GLACEADO DE VAINILLA");
+                                decoraciones = input.nextLine();
+                                System.out.println("[DISEÑO DE TORTA] " +
+                                        "\n-BASE: " +base+
+                                        "\n-PORCIONES: " +porciones+
+                                        "\n-DECORACIONES: " +decoraciones);
+                                System.out.println("El producto se encuentra disponible para entrega el dia de mañana. En el menu principal puede realizar su pedido.");
+                                break;
+
+                            case 2:
+                                System.out.println("Digite la base de su torta: ");
+                                base = input.nextLine();
+                                System.out.println("Digite el numero de porciones: ");
+                                porciones = Integer.parseInt(input.nextLine());
+                                System.out.println("Digite cual decoracion desea: ");
+                                decoraciones = input.nextLine();
+                                System.out.println("[DISEÑO DE TORTA] " +
+                                        "\n-BASE: " +base+
+                                        "\n-PORCIONES: " +porciones+
+                                        "\n-DECORACIONES: " +decoraciones);
+                                System.out.println("En caja puede ultimar detalles de su pedido. Gracias por su compra.");
+                                break;
+
+                            case 3:
+                                System.out.println("Digite la base de su torta: ");
+                                base = input.nextLine();
+                                System.out.println("Digite el numero de porciones: ");
+                                porciones = Integer.parseInt(input.nextLine());
+                                System.out.println("Digite cual decoracion desea: ");
+                                decoraciones = input.nextLine();
+                                System.out.println("[INGRESO DE VENTA] " +
+                                        "\n-BASE: " +base+
+                                        "\n-PORCIONES: " +porciones+
+                                        "\n-DECORACIONES: " +decoraciones);
+                                System.out.println("En caja puede ultimar detalles de su pedido. Gracias por su compra.");
+                                break;
+
+                            default:
+                                System.out.println("Opcion invalida!!! Intente de nuevo.");
+
+                        }
+                    }
+                }                                        
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 9</h3>
+        <h5>9. El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de
+            diferentes figuras geométricas, para ello requiere una aplicación que le
+            facilite el ejercicio
+            solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si
+            desea calcular el área de un rectángulo, triángulo o
+            trapecio. No olvide solicitar los datos
+            necesarios para realizar cada cálculo y mostrar su respectivo resultado.</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio9_Condicionales {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        int opcion;
+                        double base, altura, resultado, baseInferior, baseSuperior;
+
+                        System.out.println("---CALCULADORA DE AREAS---");
+                        System.out.println("" +
+                                "1. RECTANGULO" +
+                                "\n2. TRIANGULO" +
+                                "\n3. TRAPECIO");
+                        opcion = Integer.parseInt(input.nextLine());
+
+                        switch (opcion){
+                            case 1:
+                                System.out.println("Digite la base en metros: ");
+                                base = Double.parseDouble(input.nextLine());
+                                System.out.println("Digite la altura en metros: ");
+                                altura = Double.parseDouble(input.nextLine());
+
+                                resultado = (base * altura);
+                                System.out.println("El are del rectangulo es: "+resultado+"m^2");
+                                break;
+
+                            case 2:
+                                System.out.println("Digite la base en metros: ");
+                                base = Double.parseDouble(input.nextLine());
+                                System.out.println("Digite la altura en metros: ");
+                                altura = Double.parseDouble(input.nextLine());
+
+                                resultado = (base * altura)/2;
+                                System.out.println("El are del triangulo es: "+resultado+"m^2");
+                                break;
+
+                            case 3:
+                                System.out.println("Digite la base inferior en metros: ");
+                                baseInferior = Double.parseDouble(input.nextLine());
+                                System.out.println("Digite la base Superior en metros: ");
+                                baseSuperior = Double.parseDouble(input.nextLine());
+                                System.out.println("Digite la altura en metros: ");
+                                altura = Double.parseDouble(input.nextLine());
+
+                                resultado = ((baseSuperior + baseInferior)*altura)/2;
+                                System.out.println("El area del trapecio es: "+resultado+"m^2");
+                                break;
+
+                            default:
+                                System.out.println("Opcion invalida!!! Intente de nuevo");
+
+                        }
+                    }
+                }                                        
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 10</h3>
+        <h5>10. El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una
+            aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la
+            cuenta tenga
+            los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros
+            o consultas de valor. En los ingresos no se pueden insertar
+            valores negativos y para los retiros el
+            valor no puede ser mayor al valor que tiene en la cuenta.</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio10_Condicionales {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        int opcion, cantidad;
+                        double ingreso, retiro, saldoActual;
+                        String titular;
+
+                        cantidad = 1000000;
+                        System.out.println("---SU BANCO FIEL---");
+                        System.out.println("Digite el nombre del titular de la cuenta: ");
+                        titular = input.nextLine();
+                        System.out.println("~MENU PRINCIPAL~" +
+                                "\n1. INGRESO DE DINERO" +
+                                "\n2. RETIRO DE DINERO" +
+                                "\n3. CONSULTA DE SALDO");
+                        opcion = Integer.parseInt(input.nextLine());
+
+                        switch (opcion){
+                            case 1:
+                                System.out.println("Digite la cantidad a tranferir: ");
+                                ingreso = Double.parseDouble(input.nextLine());
+
+                                if (ingreso < 0){
+                                    System.out.println("No es posible realizar esta transaccion");
+                                }
+                                else{
+                                    saldoActual = (cantidad + ingreso);
+                                    System.out.println("Su saldo es: "+saldoActual+" COP");
+                                }
+                                break;
+
+                            case 2:
+                                System.out.println("Digite la cantidad a retirar: ");
+                                retiro = Double.parseDouble(input.nextLine());
+
+                                if (retiro > cantidad){
+                                    System.out.println("Saldo insuficiente");
+                                }
+                                else{
+                                    saldoActual = (cantidad - retiro);
+                                    System.out.println("su saldo es: "+saldoActual+" COP");
+                                }
+                                break;
+
+                            case 3:
+                                System.out.println("Su saldo es "+cantidad+" COP");
+                                break;
+
+                            default:
+                                System.out.println("Opcion invalidad!!! Intente de nuevo");
+                        }
+                    }
+                }                                       
+            </pre>
+        </div>    
+    </section>
+    <br>
+
+    <h2>
+        <a href="../html/java.html">REGRESAR</a>
+    </h2>
+    <script src="/index.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2>Taller #5</h2>
+    <div class="video">
+        <figure>
+            <img src="/img/lanza.gif" width="400">
+        </figure>
+    </div>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 8 - Condicionales</h3>
+        <h5>8. El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le
+            permita registrar los pedidos de los clientes en cuanto a las tortas que realiza.
+            Cada torta tiene
+            unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que
+            la aplicación permita registrar los pedidos, las tortas disponibles
+            y las ventas que se registren
+            diariamente.</h5>
+        <div class="codigo">
+            <pre>
+                SubProceso opcion <- menu()
+                    Definir opcion Como Entero;
+                    Escribir "BIENVENIDO";
+                    Escribir "---------------------";
+                    Escribir "PASTELERIA DON CARLOS";
+                    Escribir "---------------------";
+                    Escribir "1. Tortas disponibles";
+                    Escribir "2. Ingresar pedido";
+                    Escribir "3. Ingresar Venta";
+                    Leer opcion;
+                FinSubProceso
+
+                SubProceso disponibles <- opcion1()
+                    Definir porciones Como Entero;
+                    Definir base, decoraciones, disponibles Como Caracter;
+                    Escribir "Sabores base de torta disponibles";
+                    Escribir "Chocolate";
+                    Escribir "Limon";
+                    Escribir "Arequipe";
+                    Escribir "Vainilla";
+                    Escribir "Vino";
+                    Leer base;
+                    Escribir "Numero de porciones";
+                    Escribir "8";
+                    Escribir "10";
+                    Escribir "12";
+                    Escribir "14";
+                    Escribir "16";
+                    Leer porciones;
+                    Escribir "Decoraciones";
+                    Escribir "fresas y crema chatilly";
+                    Escribir "durazno y chocolate";
+                    Escribir "nutella y fresas";
+                    Escribir "crema de mani y moras";
+                    Escribir "glaceado de vainilla";
+                    Leer decoraciones;
+                    Escribir "El diseño de su torta es de"," ",base," ",porciones," porciones"," ","con"," ",decoraciones;
+                    Leer disponibles;
+                    Escribir "El producto se encuentra para entrega el dia de mañana";
+                    Escribir "En el menu principal puede realizar su pedido en la opcion 2";
+                FinSubProceso
+
+                SubProceso pedido <- opcion2()
+                    Definir pedido, base, decoraciones Como Caracter;
+                    Definir porciones Como Entero;
+                    Escribir "Digite la base que desea para su torta:";
+                    Leer base;
+                    Escribir "Digite el numero de porciones:";
+                    Leer porciones;
+                    Escribir "Digite cual decoracion desea";
+                    Leer decoraciones;
+                    Escribir "El diseño de su torta es de"," ",base," ",porciones," porciones"," ","con"," ",decoraciones;
+                    Leer pedido;
+                    Escribir "En caja puede ultimar los detalles de su producto con el pastelero";
+                    Escribir "Gracias por su compra";
+                FinSubProceso
+
+                SubProceso venta <- opcion3()
+                    Definir venta,base, decoraciones Como Caracter;
+                    Definir porciones Como Entero;
+                    Escribir "Digite los datos de su venta";
+                    Escribir "Digite la base";
+                    Leer base;
+                    Escribir "Digite el numero de porciones:";
+                    Leer porciones;
+                    Escribir "Digite la decoracion";
+                    Leer decoraciones;
+                    Escribir "los datos han sido almacenados exitosamente";
+                    Leer venta;
+                FinSubProceso
+
+                Proceso Funciones_Condicionales_Ejercicio8
+                    
+                    Definir registroPedido, tortasDisponibles, registroVenta, base, decoraciones, disponibles, pedido, venta Como Caracter;
+                    Definir opcion, porciones Como Entero;
+                    
+                    opcion <- menu();
+                    
+                    Segun opcion Hacer
+                        1:
+                            disponibles <- opcion1();
+                        2:
+                            pedido <- opcion2();
+                        3:
+                            venta <- opcion3();			
+                        De Otro Modo:
+                            Escribir "Opcion invalida!!! Intente de nuevo";			
+                    FinSegun	
+                FinProceso
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 10 - Condicionales</h3>
+        <h5>10. El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una
+            aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la
+            cuenta tenga
+            los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros
+            o consultas de valor. En los ingresos no se pueden insertar
+            valores negativos y para los retiros el
+            valor no puede ser mayor al valor que tiene en la cuenta.</h5>
+        <div class="codigo">
+            <pre>
+                SubProceso opcion <- menu()
+                    Definir opcion, cantidad Como Entero;
+                    Definir titular Como Caracter;
+                    cantidad <- 1000000;
+                    Escribir "BIENVENIDO";
+                    Escribir "SU BANCO FIEL";
+                    Escribir "Digite el nombre del titular de la cuenta";
+                    Leer titular;
+                    Escribir "-----------------------------------------";
+                    Escribir "1. Ingreso de dinero";
+                    Escribir "2. Retiro de dinero";
+                    Escribir "3. Consulta de saldo";
+                    Leer opcion;
+                FinSubProceso
+
+                SubProceso saldoActual <- opcion1()
+                    Definir ingreso, cantidad, saldoActual Como Real;
+                    cantidad <- 1000000;
+                    Escribir "Digite la cantidad a transferir";
+                    Leer ingreso;
+                    
+                    Si ingreso < 0 Entonces
+                        Escribir "No es posible realizar esta transaccion";
+                    SiNo
+                        saldoActual <- cantidad + ingreso;
+                        Escribir "su saldo es: "," ",saldoActual, " COP";
+                    FinSi
+                FinSubProceso
+
+                SubProceso saldoActual <- opcion2()
+                    Definir retiro, cantidad, saldoActual Como Real;
+                    cantidad <- 1000000;
+                    Escribir "Digite la cantidad a retirar";
+                    Leer retiro;
+                    
+                    Si retiro > cantidad Entonces
+                        Escribir "Saldo insuficiente";
+                    SiNo
+                        saldoActual <- cantidad - retiro;
+                        Escribir "su saldo es: "," ",saldoActual, " COP";
+                    FinSi
+                FinSubProceso
+
+                SubProceso cantidad <- opcion3()
+                    Definir cantidad Como Entero;
+                    cantidad <- 1000000;
+                    Escribir "Su saldo es: "," ",cantidad, " COP";
+                FinSubProceso
+
+                Proceso Funciones_Condicionales_Ejercicio10
+                    Definir titular Como Caracter;
+                    Definir cantidad, ingreso, retiro, saldoActual Como Real;
+                    Definir opcion Como Entero;
+                    
+                    opcion <- menu();
+                    
+                    Segun opcion Hacer
+                        1:
+                            saldoActual <- opcion1();
+                        2:
+                            saldoActual <- opcion2();			
+                        3:
+                            cantidad <- opcion3();
+                        De Otro Modo:
+                            Escribir "Opcion invalida!!! Intente de nuevo";
+                    FinSegun
+                FinProceso            
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 6 - Ciclos</h3>
+        <h5>6. Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el
+            dispositivo. Para ello cada contacto debe contener
+            nombre completo, teléfono y organización. Se requiere que la aplicación
+            permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y
+            eliminar contactos si
+            el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.</h5>
+        <div class="codigo">
+            <pre>
+                SubProceso opcion <- menu()
+                    Definir opcion Como Entero;
+                    Escribir "_______________________";
+                    Escribir "#Contactos Telefonicos#";
+                    Escribir "-----------------------";
+                    Escribir "1. Añadir contacto";
+                    Escribir "2. Buscar contactos ";
+                    Escribir "3. Eliminar contacto";
+                    Escribir "4. Salir del sistema";
+                    Leer opcion;
+                FinSubProceso
+
+                SubProceso contactos <- opcion1(nombre1, nombre2, nombre3)
+                    Definir contactos Como Entero;
+                    Escribir "Seleccione el espacio donde desea almacenar el contacto";
+                    Escribir "1. contacto"," ",nombre1;
+                    Escribir "2. contacto"," ",nombre2;
+                    Escribir "3. contacto"," ",nombre3;
+                    Escribir "4. Salir al menu principal";
+                    Leer contactos;
+                FinSubProceso
+
+                SubProceso contactos <- opcion2(nombre1, nombre2, nombre3)
+                    Definir contactos Como Entero;
+                    Escribir "Lista de contactos";
+                    Escribir "1."," ",nombre1;
+                    Escribir "2."," ",nombre2;
+                    Escribir "3."," ",nombre3;
+                    Escribir "4. Salir al menu principal";
+                    Leer contactos;
+                FinSubProceso
+
+                SubProceso contactos <- opcion3(nombre1, nombre2, nombre3)
+                    Definir contactos Como Entero;
+                    Escribir "Lista de contactos";
+                    Escribir "Seleccione el contacto que desea eliminar";
+                    Escribir "1."," ",nombre1;
+                    Escribir "2."," ",nombre2;
+                    Escribir "3."," ",nombre3;
+                    Escribir "4. Salir al menu principal";
+                    Leer contactos;	
+                FinSubProceso
+
+                SubProceso nombre <- digiteNombre()
+                    Definir nombre Como Caracter;
+                    Escribir "Digite los datos para agregar contacto";
+                    Escribir Sin Saltar "Digite su nombre completo:";
+                    Leer nombre;
+                FinSubProceso
+
+                SubProceso organizacion <- digiteOrganizacion()
+                    Definir organizacion Como Caracter;
+                    Escribir Sin Saltar "Digite la organizacion del contacto";
+                    Leer organizacion;
+                FinSubProceso
+
+                SubProceso num <- digiteNumero()
+                    Definir num Como Caracter;
+                    Escribir Sin Saltar "Digite el numero de contacto";
+                    Leer num;	
+                FinSubProceso
+
+                SubProceso condicion <- numerosRepetidos(numero1, numero2, numero3)
+                    Definir condicion Como Caracter;
+                    si numero1 = numero2 o numero1 = numero3 Entonces
+                        Escribir "numero ya se encuentra registrado";
+                        Escribir Sin Saltar "digite otro numero de contacto:";
+                        Leer condicion;
+                    SiNo
+                        Si numero2 = numero1 o numero2 = numero3 Entonces
+                            Escribir "numero ya se encuentra registrado";
+                            Escribir Sin Saltar "digite otro numero de contacto:";
+                            Leer condicion;
+                        SiNo
+                            Si numero3 = numero1 o numero3 = numero2 Entonces
+                                Escribir "numero ya se encuentra registrado";
+                                Escribir Sin Saltar "digite otro numero de contacto:";
+                                Leer condicion;
+                            SiNo
+                                Escribir "Contacto guardado exitosamente";
+                                condicion <- numero1;
+                            FinSi
+                        FinSi
+                    FinSi
+                FinSubProceso
+
+                SubProceso mostarContactos(nombre,organizacion,num)
+                    Escribir "nombre de contacto:", " ", nombre;
+                    Escribir "organizacion:", " ", organizacion;
+                    Escribir "numero de contacto:", " ", num;
+                FinSubProceso
+                Proceso Funciones_Ciclos_Ejercicio6
+                    
+                    Definir opcion, contactos Como Entero;
+                    Definir nombre1, nombre2, nombre3, organizacion1, organizacion2, organizacion3, numero1, numero2, numero3 Como Caracter;
+                    
+                    nombre1 <- "";
+                    nombre2 <- "";
+                    nombre3 <- "";
+                    numero1 <- "0";
+                    numero2 <- "1";
+                    numero3 <- "2";
+                    organizacion1 <- "";
+                    organizacion2 <- "";
+                    organizacion3 <- "";
+                    
+                    Repetir
+                        opcion <- menu();
+                        Segun opcion Hacer
+                            1://añadir contactos
+                                contactos <- opcion1(nombre1, nombre2, nombre3);
+                                Segun contactos hacer
+                                    1:
+                                        nombre1 <- digiteNombre();
+                                        organizacion1 <- digiteOrganizacion();
+                                        numero1 <- digiteNumero();			
+                                        numero1 <- numerosRepetidos(numero1, numero2, numero3);
+                                    2:
+                                        nombre2 <- digiteNombre();
+                                        organizacion2 <- digiteOrganizacion();
+                                        numero2 <- digiteNumero();			
+                                        numero2 <- numerosRepetidos(numero2, numero3, numero1);
+                                    3:
+                                        nombre3 <- digiteNombre();
+                                        organizacion3 <- digiteOrganizacion();
+                                        numero3 <- digiteNumero();			
+                                        numero3 <- numerosRepetidos(numero3, numero1, numero2);
+                                    De Otro Modo:
+                                        Escribir "Elija la opcion correcta!!!";
+                                FinSegun	
+                            2:
+                                contactos <- opcion2(nombre1, nombre2, nombre3);
+                                Segun contactos Hacer
+                                    1:
+                                        mostarContactos(nombre1,organizacion1,numero1);
+                                    2:
+                                        mostarContactos(nombre2,organizacion2,numero2);
+                                    3:
+                                        mostarContactos(nombre3,organizacion3,numero3);
+                                    4: 
+                                        Escribir " ";
+                                    De Otro Modo:
+                                        Escribir "Elija la opcion correcta!!!";
+                                FinSegun
+                            3:
+                                contactos <- opcion3(nombre1, nombre2, nombre3);
+                                segun contactos hacer
+                                    1:
+                                        nombre1 <- " ";
+                                        organizacion1 <- " ";
+                                        numero1 <- " ";
+                                        Escribir "Datos de contacto eliminados";
+                                    2: 
+                                        nombre2 <- " ";
+                                        organizacion2 <- " ";
+                                        numero2 <- " ";
+                                        Escribir "Datos de contacto eliminados";
+                                    3: 
+                                        nombre3 <- " ";
+                                        organizacion3 <- " ";
+                                        numero3 <- " ";
+                                        Escribir "Datos de contacto eliminados";
+                                    4: 
+                                        Escribir " ";
+                                    De Otro Modo:
+                                        Escribir Sin Saltar "Elija la opcion correcta!!!";
+                                FinSegun
+                        FinSegun
+                    Hasta Que opcion = 4;
+                FinProceso                  
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 7 - Ciclos</h3>
+        <h5>7. El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación
+            que permita registrar los vehículos que se
+            cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del
+            vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de
+            teléfono. Para cada vehículo
+            se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el
+            parqueadero. Recuerde que
+            el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero
+            solo puede almacenar máximo 5 vehículos.</h5>
+        <div class="codigo">
+            <pre>
+                SubProceso opcion <- menu()
+                    Definir opcion Como Entero;
+                    Escribir "_______________________";
+                    Escribir "Parqueadero el Guardian";
+                    Escribir "-----------------------";
+                    Escribir "1. Ingresar vehiculo";
+                    Escribir "2. consulta de vehiculos";
+                    Escribir "3. Retirar vehiculo";
+                    Escribir "4. Salir del sistema";
+                    Leer opcion;
+                FinSubProceso
+                
+                SubProceso ingresoVehiculo <- opcion1(marca1, marca2, marca3, marca4, marca5)
+                    Definir ingresoVehiculo Como Entero;
+                    Escribir "Escoja el espacio para su vehiculo";
+                    Escribir "1."," ", marca1;
+                    Escribir "2."," ", marca2;
+                    Escribir "3."," ", marca3;
+                    Escribir "4."," ", marca4;
+                    Escribir "5."," ", marca5;
+                    Escribir "6. Salir al menu principal";
+                    Leer ingresoVehiculo;
+                FinSubProceso
+                
+                SubProceso consultaVehiculo <- opcion2(marca1, marca2, marca3, marca4, marca5, placa1, placa2, placa3, placa4, placa5)
+                    Definir consultaVehiculo Como Entero;
+                    Escribir "Estado actual del parqueadero";
+                    Escribir "1.",marca1," ",placa1;
+                    Escribir "2.",marca2," ",placa2;
+                    Escribir "3.",marca3," ",placa3;
+                    Escribir "4.",marca4," ",placa4;
+                    Escribir "5.",marca5," ",placa5;
+                    Escribir "6. Salir al menu principal";
+                    Leer consultaVehiculo;
+                FinSubProceso
+                
+                SubProceso retirarVehiculo <- opcion3(marca1, marca2, marca3, marca4, marca5, placa1, placa2, placa3, placa4, placa5)
+                    Definir retirarVehiculo Como Entero;
+                    Escribir "Escoja el espacio del vehiculo que desea retirar";
+                    Escribir "1.",marca1," ",placa1;
+                    Escribir "2.",marca2," ",placa2;
+                    Escribir "3.",marca3," ",placa3;
+                    Escribir "4.",marca4," ",placa4;
+                    Escribir "5.",marca5," ",placa5;
+                    Escribir "6. Salir al menu principal";
+                    Leer retirarVehiculo;
+                FinSubProceso
+                
+                SubProceso placa <- digitePlaca()
+                    Definir placa Como Caracter;
+                    Escribir "Digite la placa de su vehiculo";
+                    Leer placa;
+                FinSubProceso
+                
+                SubProceso marca <- digiteMarca()
+                    Definir marca Como Caracter;
+                    Escribir "Digite la marca de su vehiculo";
+                    Leer marca;
+                FinSubProceso
+                
+                SubProceso nombre <- digiteNombre()
+                    Definir nombre Como Caracter;
+                    Escribir "Digite su nombre completo";
+                    Leer nombre;
+                FinSubProceso
+                
+                SubProceso num <- digiteNumero()
+                    Definir num Como Caracter;
+                    Escribir "Digite su numero de telefono";
+                    Leer num;
+                FinSubProceso
+                
+                SubProceso condicion <- espacioDisponible(num, marca, nombre, placa)
+                    Definir condicion Como Caracter;
+                    si num = "" Entonces
+                        Escribir "Espacio disponible";
+                    SiNo
+                        Escribir "Espacio#1 ocupado por el vehiculo"," ", marca," ","de placa"," ",placa;
+                        Escribir "El cual esta a nombre de"," ",nombre;
+                        Escribir "numero de contacto:"," ",num;
+                    FinSi
+                FinSubProceso
+                
+                Proceso Funciones_Ciclos_Ejercicio7
+                    
+                    Definir opcion, ingresoVehiculo, consultaVehiculo, retirarVehiculo Como Entero;
+                    Definir nombre1, nombre2, nombre3, nombre4, nombre5, marca1, marca2, marca3, marca4, marca5, placa1, placa2, placa3, placa4, placa5, numero1, numero2, numero3, numero4, numero5  Como Caracter;
+                    
+                    placa1 <- "";
+                    placa2 <- "";
+                    placa3 <- "";
+                    placa4 <- "";
+                    placa5 <- "";
+                    numero1 <- "";
+                    numero2 <- "";
+                    numero3 <- "";
+                    numero4 <- "";
+                    numero5 <- "";
+                    marca1 <- "";
+                    marca2 <- "";
+                    marca3 <- "";
+                    marca4 <- "";
+                    marca5 <- "";
+                    nombre1 <- "";
+                    nombre2 <- "";
+                    nombre3 <- "";
+                    nombre4 <- "";
+                    nombre5 <- "";
+                    
+                    Repetir
+                        opcion <- menu();
+                        Segun opcion Hacer
+                            1:
+                                ingresoVehiculo <- opcion1(marca1, marca2, marca3, marca4, marca5);
+                                Segun ingresoVehiculo Hacer
+                                    1:
+                                        placa1 <- digitePlaca();
+                                        marca1 <- digiteMarca();
+                                        nombre1 <- digiteNombre();
+                                        numero1 <- digiteNumero();
+                                        Escribir "";
+                                        Escribir "Bienvenido"," ",nombre1, " puede ingresar su vehiculo"," ",marca1," de placa", " ",placa1, " en el espacio#1";
+                                    2:
+                                        placa2 <- digitePlaca();
+                                        marca2 <- digiteMarca();
+                                        nombre2 <- digiteNombre();
+                                        numero2 <- digiteNumero();
+                                        Escribir "";
+                                        Escribir "Bienvenido"," ",nombre2, " puede ingresar su vehiculo"," ",marca2," de placa", " ",placa2, " en el espacio#2";
+                                    3:
+                                        placa3 <- digitePlaca();
+                                        marca3 <- digiteMarca();
+                                        nombre3 <- digiteNombre();
+                                        numero3 <- digiteNumero();
+                                        Escribir "";
+                                        Escribir "Bienvenido"," ",nombre3, " puede ingresar su vehiculo"," ",marca3," de placa", " ",placa3, " en el espacio#3";
+                                    4:
+                                        placa4 <- digitePlaca();
+                                        marca4 <- digiteMarca();
+                                        nombre4 <- digiteNombre();
+                                        numero4 <- digiteNumero();
+                                        Escribir "";
+                                        Escribir "Bienvenido"," ",nombre4, " puede ingresar su vehiculo"," ",marca4," de placa", " ",placa4, " en el espacio#4";
+                                    5:
+                                        placa5 <- digitePlaca();
+                                        marca5 <- digiteMarca();
+                                        nombre5 <- digiteNombre();
+                                        numero5 <- digiteNumero();
+                                        Escribir "";
+                                        Escribir "Bienvenido"," ",nombre5, " puede ingresar su vehiculo"," ",marca5," de placa", " ",placa5, " en el espacio#1";
+                                    6:
+                                        Escribir " ";
+                                    De Otro Modo:
+                                        Escribir "";
+                                        Escribir "Elija la opcion correcta";
+                                FinSegun
+                            2:
+                                consultaVehiculo <- opcion2(marca1, marca2, marca3, marca4, marca5, placa1, placa2, placa3, placa4, placa5);
+                                Segun consultaVehiculo Hacer
+                                    1:
+                                        numero1 <- espacioDisponible(numero1, marca1, nombre1, placa1);
+                                    2:
+                                        numero2 <- espacioDisponible(numero2, marca2, nombre2, placa2);
+                                    3:
+                                        numero3 <- espacioDisponible(numero3, marca3, nombre3, placa3);
+                                    4:
+                                        numero4 <- espacioDisponible(numero4, marca4, nombre4, placa4);
+                                    5:
+                                        numero5 <- espacioDisponible(numero5, marca5, nombre5, placa5);
+                                    6:
+                                        Escribir "";
+                                    De Otro Modo:
+                                        Escribir "";
+                                        Escribir "Elija la opcion correcta";
+                                FinSegun
+                            3:
+                                retirarVehiculo <- opcion3(marca1, marca2, marca3, marca4, marca5, placa1, placa2, placa3, placa4, placa5);
+                                Segun retirarVehiculo Hacer
+                                    1:
+                                        marca1 <- "";
+                                        placa1 <- "";
+                                        nombre1 <- "";
+                                        numero1 <- "";
+                                        Escribir "Puede retirar su vehiculo";
+                                        Escribir "Parqueadero el Guardian encantado de prestarle sus servicios";
+                                    2:
+                                        marca2 <- "";
+                                        placa2 <- "";
+                                        nombre2 <- "";
+                                        numero2 <- "";
+                                        Escribir "Puede retirar su vehiculo";
+                                        Escribir "Parqueadero el Guardian encantado de prestarle sus servicios";
+                                    3:
+                                        marca3 <- "";
+                                        placa3 <- "";
+                                        nombre3 <- "";
+                                        numero3 <- "";
+                                        Escribir "Puede retirar su vehiculo";
+                                        Escribir "Parqueadero el Guardian encantado de prestarle sus servicios";
+                                    4:
+                                        marca4 <- "";
+                                        placa4 <- "";
+                                        nombre4 <- "";
+                                        numero4 <- "";
+                                        Escribir "Puede retirar su vehiculo";
+                                        Escribir "Parqueadero el Guardian encantado de prestarle sus servicios";
+                                    5:
+                                        marca5 <- "";
+                                        placa5 <- "";
+                                        nombre5 <- "";
+                                        numero5 <- "";
+                                        Escribir "Puede retirar su vehiculo";
+                                        Escribir "Parqueadero el Guardian encantado de prestarle sus servicios";
+                                    6:
+                                        Escribir "";
+                                    De Otro Modo:
+                                        Escribir "";
+                                        Escribir "Elija la opcion correcta";
+                                FinSegun
+                        FinSegun
+                    Hasta Que opcion = 4;
+                FinProceso                
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 8 - Ciclos</h3>
+        <h5>8. La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza
+            automovilística y establecer quienes lo han
+            aprobado para continuar con el trámite de adquirir la licencia de conducción. Para
+            cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan
+            presentado el curso y resultados de la
+            prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga
+            presente que la
+            escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.</h5>
+        <div class="codigo">
+            <pre>
+                SubProceso opcion <- menu()
+                    Definir opcion Como Entero;
+                    Escribir "____________________________________";
+                    Escribir "Escuela automovilistica - El Maestro";
+                    Escribir "------------------------------------";
+                    Escribir "1. Ingresar usuario al curso";
+                    Escribir "2. Consultar usuarios activos";
+                    Escribir "3. Resultados de la prueba";
+                    Escribir "4. Salir del sistema";
+                    Leer opcion;
+                FinSubProceso
+
+                SubProceso registroUsuario <- opcion1(usuario1, usuario2, usuario3, usuario4, usuario5, usuario6, usuario7, usuario8)
+                    Definir registroUsuario Como Entero;
+                    Escribir "Elija donde quiere registrar el usuario";
+                    Escribir "1."," ",usuario1;
+                    Escribir "2."," ",usuario2;
+                    Escribir "3."," ",usuario3;
+                    Escribir "4."," ",usuario4;
+                    Escribir "5."," ",usuario5;
+                    Escribir "6."," ",usuario6;
+                    Escribir "7."," ",usuario7;
+                    Escribir "8."," ",usuario8;
+                    Escribir "9. Salir al menu principal";
+                    Leer registroUsuario;
+                FinSubProceso
+
+                SubProceso usuario <- digiteNombre()
+                    Definir usuario Como Caracter;
+                    Escribir "Digite nombre completo del usuario";
+                    Leer usuario;
+                FinSubProceso
+
+                SubProceso calificacion <- digiteCalificacion()
+                    Definir calificacion Como Caracter;
+                    Escribir "Digite si el usuario fue aprobado o no";
+                    Leer calificacion;
+                FinSubProceso
+
+                SubProceso usuarioActivo <- opcion2(usuario1, usuario2, usuario3, usuario4, usuario5, usuario6, usuario7, usuario8)
+                    Definir usuarioActivo Como Entero;
+                    Escribir "lista de usuarios";
+                    Escribir "1."," ",usuario1;
+                    Escribir "2."," ",usuario2;
+                    Escribir "3."," ",usuario3;
+                    Escribir "4."," ",usuario4;
+                    Escribir "5."," ",usuario5;
+                    Escribir "6."," ",usuario6;
+                    Escribir "7."," ",usuario7;
+                    Escribir "8."," ",usuario8;
+                    Escribir "9. Salir al menu principal";
+                    Leer usuarioActivo;
+                FinSubProceso
+
+                SubProceso condicion <- usuarioAct(usuario)
+                    Definir condicion Como Caracter;
+                    Si usuario = "" Entonces
+                        Escribir "No se encuentra usuario, espacio disponible para ingresar nuevo";
+                        condicion <- "";
+                    SiNo
+                        Escribir "El usuario"," ",usuario," se encuentra activo";
+                        condicion <- usuario;
+                    FinSi
+                FinSubProceso
+
+                SubProceso calificacionUsu <- opcion3(usuario1, usuario2, usuario3, usuario4, usuario5, usuario6, usuario7, usuario8)
+                    Definir calificacionUsu Como Entero;
+                    Escribir "Lista de calificaciones";
+                    Escribir "1."," ",usuario1;
+                    Escribir "2."," ",usuario2;
+                    Escribir "3."," ",usuario3;
+                    Escribir "4."," ",usuario4;
+                    Escribir "5."," ",usuario5;
+                    Escribir "6."," ",usuario6;
+                    Escribir "7."," ",usuario7;
+                    Escribir "8."," ",usuario8;
+                    Escribir "9. Salir al menu principal";
+                    Leer calificacionUsu;
+                FinSubProceso
+
+                SubProceso estado <- notaUsuario(usuario, calificacion)
+                    Definir estado Como Caracter;
+                    Si calificacion = "" Entonces
+                        Escribir "No se encuentra registro";
+                    SiNo
+                        Si calificacion = "aprobado" Entonces
+                            Escribir "La calificacion del usuario"," ",usuario," es:"," ",calificacion;
+                            Escribir "El usuario puede seguir con el tramite de su licencia";
+                        SiNo
+                            Escribir "El usuario debe repetir la prueba del curso";
+                        FinSi
+                    FinSi
+                FinSubProceso
+
+
+                Proceso Funciones_Ciclos_Ejercicio8
+                    
+                    Definir opcion, registroUsuario, usuarioActivo, calificacionUsuario Como Entero;
+                    Definir usuario1, usuario2, usuario3, usuario4, usuario5, usuario6, usuario7, usuario8 Como Caracter;
+                    Definir calificacion1, calificacion2, calificacion3, calificacion4, calificacion5, calificacion6, calificacion7, calificacion8 Como Caracter;
+                    
+                    usuario1 <- "";
+                    usuario2 <- "";
+                    usuario3 <- "";
+                    usuario4 <- "";
+                    usuario5 <- "";
+                    usuario6 <- "";
+                    usuario7 <- "";
+                    usuario8 <- "";
+                    calificacion1 <- "";
+                    calificacion2 <- "";
+                    calificacion3 <- "";
+                    calificacion4 <- "";
+                    calificacion5 <- "";
+                    calificacion6 <- "";
+                    calificacion7 <- "";
+                    calificacion8 <- "";
+                    
+                    Repetir
+                        opcion <- menu();
+                        Segun opcion Hacer
+                            1:
+                                registroUsuario <- opcion1(usuario1, usuario2, usuario3, usuario4, usuario5, usuario6, usuario7, usuario8);
+                                segun registroUsuario Hacer
+                                    1:
+                                        usuario1 <- digiteNombre();
+                                        calificacion1 <- digiteCalificacion();
+                                    2:
+                                        usuario2 <- digiteNombre();
+                                        calificacion2 <- digiteCalificacion();
+                                    3:
+                                        usuario2 <- digiteNombre();
+                                        calificacion2 <- digiteCalificacion();
+                                    4:
+                                        usuario3 <- digiteNombre();
+                                        calificacion3 <- digiteCalificacion();
+                                    5:
+                                        usuario4 <- digiteNombre();
+                                        calificacion4 <- digiteCalificacion();
+                                    6:
+                                        usuario5 <- digiteNombre();
+                                        calificacion5 <- digiteCalificacion();
+                                    7:
+                                        usuario6 <- digiteNombre();
+                                        calificacion6 <- digiteCalificacion();
+                                    8:
+                                        usuario7 <- digiteNombre();
+                                        calificacion7 <- digiteCalificacion();
+                                    9:
+                                        Escribir "";
+                                    De Otro Modo:
+                                        Escribir "";
+                                        Escribir "Elija la opcion correcta";
+                                FinSegun
+                                
+                            2:
+                                usuarioActivo <- opcion2(usuario1, usuario2, usuario3, usuario4, usuario5, usuario6, usuario7, usuario8);
+                                Segun usuarioActivo Hacer
+                                    1:
+                                        usuario1 <- usuarioAct(usuario1);
+                                    2:
+                                        usuario2 <- usuarioAct(usuario2);
+                                    3:
+                                        usuario3 <- usuarioAct(usuario3);
+                                    4:
+                                        usuario4 <- usuarioAct(usuario4);
+                                    5:
+                                        usuario5 <- usuarioAct(usuario5);
+                                    6:
+                                        usuario6 <- usuarioAct(usuario6);
+                                    7:
+                                        usuario7 <- usuarioAct(usuario7);
+                                    8:
+                                        usuario8 <- usuarioAct(usuario8);
+                                    9:
+                                        Escribir "";
+                                    De Otro Modo:
+                                        Escribir "";
+                                        Escribir "Elija la opcion correcta";
+                                FinSegun
+                                
+                            3:
+                                calificacionUsuario <- opcion3(usuario1, usuario2, usuario3, usuario4, usuario5, usuario6, usuario7, usuario8);
+                                Segun calificacionUsuario Hacer
+                                    1:
+                                        calificacion1 <- notaUsuario(usuario1, calificacion1);
+                                    2:
+                                        calificacion2 <- notaUsuario(usuario2, calificacion2);
+                                    3:
+                                        calificacion3 <- notaUsuario(usuario3, calificacion3);
+                                    4:
+                                        calificacion4 <- notaUsuario(usuario4, calificacion4);
+                                    5:
+                                        calificacion5 <- notaUsuario(usuario5, calificacion5);
+                                    6:
+                                        calificacion6 <- notaUsuario(usuario6, calificacion6);
+                                    7:
+                                        calificacion7 <- notaUsuario(usuario7, calificacion7);
+                                    8:
+                                        calificacion8 <- notaUsuario(usuario8, calificacion8);
+                                    9:
+                                        Escribir "";
+                                    De Otro Modo:
+                                        Escribir "";
+                                        Escribir "Elija la opcion correcta";
+                                FinSegun
+                            4:
+                                Escribir "";
+                                
+                            De Otro Modo:
+                                Escribir "";
+                                Escribir "Elija la opcion correcta";
+                                
+                        FinSegun
+                        
+                    Hasta Que opcion = 4;
+                FinProceso                    
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <h2>
+        <a href="../html/pseint.html">REGRESAR</a>
+    </h2>
+    <script src="/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables e Impresion</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2>Taller #1</h2>
+    <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/MdaZu3V0DtY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 1</h3>
+        <h5>1.Realizar un programa el cual solicite su nombre y apellidos.</h5>
+        <div class="codigo">
+            <pre>
+                Proceso Ejercicio1
+            
+                    //Definimos las variables de nuestro programa.
+                    Definir nombre Como Caracter;
+                    Definir apellidos Como Caracter;
+                    //solicitamos al usuario digitar nombre, apellidos y los guardamos dentro de la variable.
+                    Escribir "Digite su nombre:";
+                    Leer nombre;
+                    Escribir "Digite sus apellidos:";
+                    Leer apellidos;
+                
+                FinProceso
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 2</h3>
+        <h5>2.Realizar un programa el cual solicite su nombre, apellidos , edad y estatura.</h5>
+        <div class="codigo">
+            <pre>
+                Proceso Ejercicio2
+	
+	                //Definimos las variables de nuestro programa.
+	                Definir nombre Como Caracter;
+	                Definir apellidos Como Caracter;
+	                Definir edad Como Entero;
+	                Definir estatura Como Real;
+	                //Solicitamos al usuario digitar los datos y los guardamos dentro de la variable.
+	                Escribir "Digite su nombre:";
+	                Leer nombre;
+	                Escribir "Digite sus apellidos:";
+	                Leer apellidos;
+	                Escribir "Digite su edad:";
+	                Leer edad;
+	                Escribir "Digite su estatura:";
+	                Leer estatura;
+	
+                FinProceso
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 3</h3>
+        <h5>3.Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].</h5>
+        <div class="codigo">
+            <pre>
+                Proceso Ejercicio3
+	
+                    //Definimos las variables de nuestro programa.
+                    Definir nombre Como Caracter;
+                    Definir apellidos Como Caracter;
+                    Definir nombreMadre Como Caracter;
+                    Definir apellidosMadre Como Caracter;
+                    Definir nombrePadre Como Caracter;
+                    Definir apellidosPadre Como Caracter;
+                    //Solicitamos al usuario digitar los datos y los guardamos dentro de la variable.
+                    Escribir Sin Saltar"Digite su nombre:";
+                    Leer nombre;
+                    Escribir sin saltar"Digite sus apellidos:";
+                    Leer apellidos;
+                    Escribir Sin Saltar"Digite el nombre de su madre:";
+                    Leer nombreMadre;
+                    Escribir Sin Saltar"Digite sus apellidos:";
+                    Leer apellidosMadre;
+                    Escribir Sin Saltar"Digite el nombre de su padre:";
+                    Leer nombrePadre;
+                    Escribir Sin Saltar"Digite sus apellidos:";
+                    Leer apellidosPadre;
+                    Limpiar Pantalla;
+                    //Imprimimos en pantalla los datos.
+                    Escribir " Yo ", nombre ," ", apellidos, " soy hijo de ", nombreMadre ," ", apellidosmadre, " y ", nombrePadre ," ", apellidosPadre; 
+                    
+                FinProceso    
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 4</h3>
+        <h5>4.Realizar un programa el cual solicite el nombre de una ciudad capital y el pais. Al finalizar debe imprimir en pantalla el siguiente mensaje "la ciudad [nombre de la ciudad, el la capital del pais [nombre del pais].</h5>
+        <div class="codigo">
+            <pre>
+                Proceso Ejercicio4
+	
+                    //Definimos las variables de nuestro programa.
+                    Definir ciudad Como Caracter;
+                    Definir pais Como Caracter;
+                    //solicitamos al usuario digitar ciudad, pais y los guardamos dentro de la variable.
+                    Escribir Sin Saltar"Digite el nombre de la ciudad:";
+                    Leer ciudad;
+                    Escribir Sin Saltar"Digita el pais de esa ciudad: ";
+                    Leer pais;
+                    //imprimimos los datos.
+                    Escribir "la Ciudad ", ciudad, " es la capital de ", pais;
+	
+                FinProceso
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 5</h3>
+        <h5>5.Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su nombre completo. Al finalizar el sistema debe e imprimir en pantalla el siguiente mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de edad y [Nombre Completo] es actualmente su dueño(a).</h5>
+        <div class="codigo">
+            <pre>
+                Proceso Ejercicio5
+	
+                    //Definimos las variables de nuestro programa.
+                    Definir nombreMascota Como Caracter;
+                    Definir tipo Como Caracter;
+                    Definir Edad Como Entero;
+                    Definir nombreAmo Como Caracter;
+                    //Solicitamos al usuario digitar los datos y losguardamos dentro de las variables.
+                    Escribir Sin Saltar"Digite el nombre de su mascota:";
+                    Leer nombreMascota;
+                    Escribir sin saltar"Digite la raza de su mascota:";
+                    Leer tipo;
+                    Escribir Sin Saltar"Digite la edad de su mascota:";
+                    Leer edad;
+                    Escribir Sin Saltar"Digite el nombre del dueño de la mascota:";
+                    Leer nombreAmo;
+                    Limpiar Pantalla;
+                    //Imprimimos los datos
+                    Escribir nombreMascota, " es un ", tipo, " el cual ,tiene ", edad, " años de edad y ", nombreAmo, " es actualmente su dueño";
+	
+                FinProceso
+            </pre>
+        </div>    
+    </section>
+    <br>
+
+    <h2>
+        <a href="../html/pseint.html">REGRESAR</a>
+    </h2>
+    <script src="/index.js"></script>
+
+</body>
+</html>

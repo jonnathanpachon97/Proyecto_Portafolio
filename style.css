@@ -1,0 +1,159 @@
+* {
+    margin: 0px;
+    padding: 0px; 
+}
+
+body {
+    background-image: url("img/FondoCastillo.png");
+    background-attachment: fixed;
+}
+
+h1 {
+    margin: 100px;
+    font-family: 'VT323', monospace;
+    font-size: 100px;
+    color:whitesmoke;
+    text-align: center;
+}
+
+h2, h3 {
+    margin: 10px;
+    font-family: 'VT323', monospace;
+    font-size: 40px;
+    color:whitesmoke;
+    text-align: center;
+}
+
+nav{
+    margin: 40px;
+    text-align: center;
+    border-top: 5px solid goldenrod;
+    border-bottom: 5px solid goldenrod;
+}
+
+.boton {
+    margin:10px;
+    font-family: 'VT323', monospace;
+    display:inline-block;
+    font-size: 35px;
+    background-color: transparent;
+    color:whitesmoke;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    box-shadow: 0 0 10px gold,
+                0 0 30px goldenrod,
+                0 0 70px goldenrod,
+                0 0 130px gold;
+}
+
+.espada {
+    margin: -20px;
+}
+
+p{
+    margin:10px;
+    font-family: 'VT323', monospace;
+    display:inline-block;
+    font-size: 30px;
+    color:whitesmoke;
+}
+
+h4 {
+    margin:10px;
+    font-family: 'VT323', monospace;
+    display:flex;
+    text-align: center;
+    font-size: 30px;
+    color:whitesmoke;
+}
+
+h5 {
+    margin:40px;
+    font-family: 'VT323', monospace;
+    text-align: center;
+    justify-items: center;
+    font-size: 28px;
+    color:whitesmoke;
+    animation: amarillo-neon 4s infinite alternate;
+
+}
+
+@keyframes amarillo-neon {
+    0%, 10%, 15%, 20%, 30%, 35%, 40%, 50%, 55%, 60%, 70%, 75%, 80%, 85%, 90%, 100% {
+        text-shadow:    9px 9px 30px green,
+                        3px 3px 5px orange,
+                        -3px -3px 5px yellow,
+                        -9px -9px 30px green;
+    }
+
+    10%, 30%, 60%, 90% {
+        text-shadow: none;
+    }
+
+}
+
+h6 {
+    font-size: 20px;
+    font-family: 'VT323', monospace;
+    color:black;
+}
+
+.redes {
+    margin: 40px;
+    text-align: center;
+    justify-items: end;
+    cursor: pointer;
+}
+
+/*
+* estilos html proyectos pseint
+*/
+
+figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botones-pseint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.tarjeta:hover{
+    background-color: black;
+    box-shadow: 0 0 10px whitesmoke inset,
+                0 0 30px white inset,
+                0 0 70px white,
+                0 0 100px whitesmoke;
+}
+
+.codigo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    color: goldenrod;
+}
+
+pre {
+    color: whitesmoke;
+}
+
+.video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

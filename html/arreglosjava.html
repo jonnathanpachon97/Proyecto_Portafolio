@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2>Taller #4</h2>
+    <div class="video">
+        <figure>
+            <img src="/img/loco.gif" width="400">
+        </figure> 
+    </div>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 1</h3>
+        <h5>1. Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de recoger toda
+            información, se requiere imprimir el índice de cada
+            posición en el arreglo con su valor de la siguiente manera:
+            [0] = 55
+            [1] = 99
+            [2] = 11
+            [3] = 56
+            [4] = 69</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio1_Arreglos {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        int[] numerosEnteros = new int[5];
+
+                        numerosEnteros[0] = 55;
+                        numerosEnteros[1] = 99;
+                        numerosEnteros[2] = 11;
+                        numerosEnteros[3] = 56;
+                        numerosEnteros[4] = 69;
+
+                        for (int i=0;i<5;i++){
+                            System.out.println("["+i+"] = "+numerosEnteros[i]);
+                        }
+                    }
+                }                  
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 2</h3>
+        <h5>2. Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números aleatorios entre 1 y 100; despué
+            de haber llenado dicho arreglo, se debe volver a
+            recorrer utilizando un ciclo diferente al que se usó para llenarse e imprimir los números pares e impares. Ejemplo<br>
+            Números pares: 2, 4, 6, 8, 10<br>
+            Números impares: 1, 3, 5, 7, 9</h5>
+        <div class="codigo">
+            <pre>
+                public class Ejercicio2_Arreglos {
+                    public static void main(String[] args) {
+                
+                        int conteoPares = 0;
+                        int conteoImpares = 0;
+                        int j = 0;
+                
+                        int[] numerosEnteros = new int[20];
+                        int[] pares = new int[20];
+                        int[] impares = new int[20];
+                
+                        for (int i=0;i<=19;i++){
+                            numerosEnteros[i] = (int) (Math.random() * 100+1);
+                            System.out.println("["+i+"] = "+numerosEnteros[i]);
+                        }
+                
+                        while (j <= 19){
+                            if (numerosEnteros[j] % 2 == 0){
+                                pares[conteoPares] = numerosEnteros[j];
+                                conteoPares++;
+                            }
+                            else {
+                                impares[conteoImpares] = numerosEnteros[j];
+                                conteoImpares++;
+                            }
+                            j++;
+
+
+                        }
+                
+                        System.out.println(conteoPares+"-"+conteoImpares);
+                
+                        System.out.print("Numeros Pares: ");
+                        for (int k=0;k<conteoPares;k++){
+                            if (k==0){
+                                System.out.print(pares[k]);
+                            }
+                            else {
+                                System.out.print(","+pares[k]);
+                            }
+                        }
+                        System.out.print(".");
+                        System.out.println("");
+                        System.out.print("Numeros Impares: ");
+                        for (int l=0;l<conteoImpares;l++){
+                            if (l==0){
+                                System.out.print(impares[l]);
+                            }
+                            else {
+                                System.out.print(","+impares[l]);
+                            }
+                        }
+                        System.out.println(".");
+                    }
+                }                  
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 3</h3>
+        <h5>3. Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.</h5>
+        <div class="codigo">
+            <pre>
+                public class Ejercicio3_Arreglos {
+                    public static void main(String[] args) {
+                
+                        int contador;
+                        int j, i;
+                
+                        j = 0;
+                
+                        int numerosPrimos[] = new int[168];
+                
+                        for (int numeros1=1;numeros1<=1000;numeros1++){
+                            i = 1;
+                            contador = 0;
+                            while (i <=numeros1){
+                                if (numeros1 % i == 0){
+                                    contador++;
+                                }
+                                i++;
+                            }
+                            if (contador == 2){
+                                numerosPrimos[j] = numeros1;
+                                j++;
+                            }
+                        }
+                        System.out.print("Numeros primos del 1 al 1000 son: ");
+                        for (int numeros1=0;numeros1<=(168-1);numeros1++){
+                            System.out.print(numerosPrimos[numeros1]+",");
+                        }
+                    }
+                }                     
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 4</h3>
+        <h5>4. Dada la siguiente matriz bidimensional, el cual debe de quemar en el código<br>
+            01 02 03 04 05<br>
+            06 07 08 09 10<br>
+            11 12 13 14 15<br>
+            16 17 18 19 20<br>
+            Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.<br>
+            01 02 03 04 05<br>
+            10 09 08 07 06<br>
+            11 12 13 14 15<br>
+            20 19 18 17 16</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio4_Arreglos {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        String[][] matriz = new String[4][5];
+
+                        matriz[0][0] = "01";
+                        matriz[0][1] = "02";
+                        matriz[0][2] = "03";
+                        matriz[0][3] = "04";
+                        matriz[0][4] = "05";
+                        matriz[1][0] = "06";
+                        matriz[1][1] = "07";
+                        matriz[1][2] = "08";
+                        matriz[1][3] = "09";
+                        matriz[1][4] = "10";
+                        matriz[2][0] = "11";
+                        matriz[2][1] = "12";
+                        matriz[2][2] = "13";
+                        matriz[2][3] = "14";
+                        matriz[2][4] = "15";
+                        matriz[3][0] = "16";
+                        matriz[3][1] = "17";
+                        matriz[3][2] = "18";
+                        matriz[3][3] = "19";
+                        matriz[3][4] = "20";
+
+                        for (int fila=0;fila<=3;fila++){
+                            for (int columna=0;columna<=4;columna++){
+                                System.out.print(matriz[fila][columna]+" ");
+                            }
+                            System.out.println("");
+                        }
+                        System.out.println("");
+                        for (int fila=0;fila<=0;fila++){
+                            for (int columna=0;columna<=4;columna++){
+                                System.out.print(matriz[fila][columna]+" ");
+                            }
+                            System.out.println("");
+                        }
+                        for (int fila=1;fila<=1;fila++){
+                            for (int columna=4;columna>=0;columna--){
+                                System.out.print(matriz[fila][columna]+" ");
+                            }
+                            System.out.println("");
+                        }
+                        for (int fila=2;fila<=2;fila++){
+                            for (int columna=0;columna<=4;columna++){
+                                System.out.print(matriz[fila][columna]+" ");
+                            }
+                            System.out.println("");
+                        }
+                        for (int fila=3;fila<=3;fila++){
+                            for (int columna=4;columna>=0;columna--){
+                                System.out.print(matriz[fila][columna]+" ");
+                            }
+                            System.out.println("");
+                        }
+                    }
+                }                         
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 5</h3>
+        <h5>5. Se debe de imprimir el siguiente cuadro, El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada celda debe esta
+            previamente calculado en una matriz bidimensional la cual
+            cada resultado obedecerá a la fila y columna insertada por e
+            usuario.</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio5_Arreglos {
+                    public static void main(String[] args) {
+                        Scanner sc = new Scanner(System.in);
+
+                        int i = 1;
+                        int j = 1;
+                        int a, b;
+                        int[][] matriz = new int[10][10];
+
+                        System.out.println("" +
+                                "                C    O    L    U    M    N    A    S\n" +
+                                "\t      [0]  [1]  [2]  [3]  [4]  [5]  [6]  [7]  [8]  [9]\n" +
+                                "\t  [0] 1x1  2x1  3x1  4x1  5x1  6x1  7x1  8x1  9x1  10x1\n" +
+                                "\t  [1] 1x2  2x2  3x2  4x2  5x2  6x2  7x2  8x2  9x2  10x2\n" +
+                                "\tF [2] 1x3  2x3  3x3  4x3  5x3  6x3  7x3  8x3  9x3  10x3\n" +
+                                "\tI [3] 1x4  2x4  3x4  4x4  5x4  6x4  7x4  8x4  9x4  10x4\n" +
+                                "\tL [4] 1x5  2x5  3x5  4x5  5x5  6x5  7x5  8x5  9x5  10x5\n" +
+                                "\tA [5] 1x6  2x6  3x6  4x6  5x6  6x6  7x6  8x6  9x6  10x6\n" +
+                                "\tS [6] 1x7  2x7  3x7  4x7  5x7  6x7  7x7  8x7  9x7  10x7\n" +
+                                "\t  [7] 1x8  2x8  3x8  4x8  5x8  6x8  7x8  8x8  9x8  10x8\n" +
+                                "\t  [8] 1x9  2x9  3x9  4x9  5x9  6x9  7x9  8x9  9x9  10x9\n" +
+                                "\t  [9] 1x10 2x10 3x10 4x10 5x10 6x10 7x10 8x10 9x10 10x10" );
+
+
+
+                        System.out.println("");
+
+                        for (int fila=0;fila<=9;fila++){
+                            for (int columna=0;columna<=9;columna++){
+                                matriz[fila][columna] = (i * j);
+                                i++;
+                            }
+                            i = 1;
+                            j++;
+                        }
+
+                        System.out.print("Digite numero de fila: ");
+                        a = Integer.parseInt(sc.nextLine());
+                        System.out.print("Digite numero de columna: ");
+                        b = Integer.parseInt(sc.nextLine());
+
+                        System.out.println("");
+                        System.out.println("El resultado es: "+matriz[a][b]);
+
+                    }
+                }                            
+            </pre>
+        </div>    
+    </section>
+    <br>
+
+    <h2>
+        <a href="../html/java.html">REGRESAR</a>
+    </h2>
+    <script src="/index.js"></script>     
+</body>
+</html>

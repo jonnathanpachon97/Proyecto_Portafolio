@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2>Taller #4</h2>
+    <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/uKLLZlCgpRQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 1</h3>
+        <h5>1. Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de recoger toda
+            información, se requiere imprimir el índice de cada
+            posición en el arreglo con su valor de la siguiente manera:
+            [0] = 55
+            [1] = 99
+            [2] = 11
+            [3] = 56
+            [4] = 69</h5>
+        <div class="codigo">
+            <pre>
+                Proceso Arreglos_Ejercicio1
+	
+                    Definir i Como Entero;
+                    Definir numerosEnteros Como Entero;
+                    
+                    Dimension numerosEnteros[5];
+                    
+                    
+                    Para i <- 0 Hasta 4 Con Paso 1 Hacer
+                        Escribir Sin Saltar "Digite el numero entero de la posicion", " ",i,":";
+                        Leer numerosEnteros[i];
+                    FinPara
+                    
+                    para i <- 0 Hasta 4 Con Paso 1 Hacer
+                        Escribir " [",i,"] ",numerosEnteros[i];
+                    FinPara
+                    
+                FinProceso    
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 2</h3>
+        <h5>2. Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números aleatorios entre 1 y 100; despué
+            de haber llenado dicho arreglo, se debe volver a
+            recorrer utilizando un ciclo diferente al que se usó para llenarse e imprimir los números pares e impares. Ejemplo<br>
+            Números pares: 2, 4, 6, 8, 10<br>
+            Números impares: 1, 3, 5, 7, 9</h5>
+        <div class="codigo">
+            <pre>
+                Proceso Arreglos_Ejercicio2
+	
+                    Definir i, j, k, l Como Entero;
+                    Definir numerosEnteros, pares, impares, conteoPares, conteoImpares Como Entero;
+                    
+                    i <- 0;
+                    j <- 0;
+                    k <- 0;
+                    l <- 0;
+                    conteoPares <- 0;
+                    conteoImpares <- 0;
+                    
+                    Dimension numerosEnteros[20];
+                    Dimension pares[20];
+                    Dimension impares[20];
+                    
+                    para i <- 0 Hasta 19 Con Paso 1 Hacer
+                        numerosEnteros[i] <- Aleatorio(1,100);
+                        Escribir " [",i,"] ",numerosEnteros[i];
+                        
+                    FinPara
+                    
+                    Mientras j <= 19 Hacer
+                        si numerosEnteros[j] % 2 = 0 Entonces
+                            pares[conteoPares] <- numerosEnteros[j];
+                            conteoPares <- conteoPares + 1;
+                        SiNo
+                            impares[conteoImpares] <- numerosEnteros[j];
+                            conteoImpares <- conteoImpares + 1;
+                        FinSi
+                        j <- j + 1;
+                    FinMientras
+                    
+                    Escribir " ";
+                    Escribir Sin Saltar "Numeros pares: ";
+                    
+                    Para k <- 0 Hasta (conteoPares - 1) Con Paso 1 Hacer
+                        Escribir sin saltar pares[k],",";
+                    FinPara
+                    
+                    Escribir " ";
+                    Escribir Sin Saltar "Numero impares: ";
+                    
+                    Para l <- 0 Hasta (conteoImpares - 1) Con Paso 1 Hacer
+                        Escribir sin saltar impares[l],",";
+                    FinPara
+                    
+                    Escribir " ";
+                    
+                FinProceso     
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 3</h3>
+        <h5>3. Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.</h5>
+        <div class="codigo">
+            <pre>
+                Proceso Arreglos_Ejercicio3
+	
+                    Definir i, j, num, contador,numerosPrimos Como Entero;
+                    Dimension numerosPrimos[168];
+                    
+                    j <- 0;
+                    
+                    Para num <- 1 hasta 1000 Con Paso 1 Hacer
+                        i <- 1;
+                        contador <- 0;
+                        Mientras i <= num Hacer
+                            Si num % i = 0 Entonces
+                                contador <- contador + 1;
+                            FinSi
+                            i <- i + 1;
+                        FinMientras
+                        Si contador = 2 Entonces
+                            numerosPrimos[j] <- num;
+                            j <- j + 1;
+                        FinSi
+                    FinPara
+                    
+                    Escribir "Numeros Primos del 1 a 1000 son:";
+                    
+                    Para num <- 0 Hasta (168 - 1) Con Paso 1 Hacer
+                        Escribir Sin Saltar numerosPrimos[num],",";
+                    FinPara
+                    Escribir " ";
+
+                FinProceso       
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 3</h3>
+        <h5>4. Dada la siguiente matriz bidimensional, el cual debe de quemar en el código<br>
+            01 02 03 04 05<br>
+            06 07 08 09 10<br>
+            11 12 13 14 15<br>
+            16 17 18 19 20<br>
+            Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.<br>
+            01 02 03 04 05<br>
+            10 09 08 07 06<br>
+            11 12 13 14 15<br>
+            20 19 18 17 16</h5>
+        <div class="codigo">
+            <pre>
+                Proceso Arreglos_Ejercicio4
+	
+                    Definir fila, columna Como Entero;
+                    Definir matriz Como caracter;
+                    
+                    Dimension matriz[4,5];
+                    
+                    matriz[0,0] <- "01";
+                    matriz[0,1] <- "02";
+                    matriz[0,2] <- "03";
+                    matriz[0,3] <- "04";
+                    matriz[0,4] <- "05";
+                    matriz[1,0] <- "06";
+                    matriz[1,1] <- "07";
+                    matriz[1,2] <- "08";
+                    matriz[1,3] <- "09";
+                    matriz[1,4] <- "10";
+                    matriz[2,0] <- "11";
+                    matriz[2,1] <- "12";
+                    matriz[2,2] <- "13";
+                    matriz[2,3] <- "14";
+                    matriz[2,4] <- "15";
+                    matriz[3,0] <- "16";
+                    matriz[3,1] <- "17";
+                    matriz[3,2] <- "18";
+                    matriz[3,3] <- "19";
+                    matriz[3,4] <- "20";
+                    
+                    para fila <- 0 Hasta 3 Con Paso 1 Hacer
+                        para columna <- 0 Hasta 4 con paso 1 Hacer
+                            Escribir matriz[fila,columna], " ",Sin Saltar;
+                        FinPara
+                        Escribir " ";
+                    FinPara
+                    
+                    Escribir " ";
+                    para fila <- 0 Hasta 0 con paso 1 Hacer
+                        para columna <- 0 Hasta 4 con paso 1 Hacer
+                            Escribir matriz[fila,columna]," ",Sin Saltar;
+                        FinPara
+                    FinPara
+                    Escribir " ";
+                    para fila <- 1 Hasta 1 con paso 1 Hacer
+                        para columna <- 4 Hasta 0 con paso -1 Hacer
+                            Escribir matriz[fila,columna]," ",Sin Saltar;
+                        FinPara
+                    FinPara
+                    Escribir " ";
+                    para fila <- 2 Hasta 2 con paso 1 Hacer
+                        para columna <- 0 Hasta 4 con paso 1 Hacer
+                            Escribir matriz[fila,columna]," ",Sin Saltar;
+                        FinPara
+                    FinPara
+                    Escribir " ";
+                    para fila <- 3 Hasta 3 con paso 1 Hacer
+                        para columna <- 4 Hasta 0 con paso -1 Hacer
+                            Escribir matriz[fila,columna]," ",Sin Saltar;
+                        FinPara
+                    FinPara
+                    
+                    Escribir " ";
+                    
+                FinProceso
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 3</h3>
+        <h5>5. Se debe de imprimir el siguiente cuadro, El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada celda debe esta
+            previamente calculado en una matriz bidimensional la cual
+            cada resultado obedecerá a la fila y columna insertada por e
+            usuario. </h5>
+        <div class="codigo">
+            <pre>
+                Proceso Arreglos_Ejercicio5
+	
+                    Definir fila, columna, i, j, contador, resultado Como Entero;
+                    Definir matriz, a, b Como entero;
+                    
+                    Dimension matriz[10,10];
+                    
+                    
+                    Escribir "            C    O    L    U    M    N    A    S       ";
+                    Escribir "      [0]  [1]  [2]  [3]  [4]  [5]  [6]  [7]  [8]  [9] ";
+                    Escribir "  [0] 1x1  2x1  3x1  4x1  5x1  6x1  7x1  8x1  9x1  10x1";
+                    Escribir "  [1] 1x2  2x2  3x2  4x2  5x2  6x2  7x2  8x2  9x2  10x2";
+                    Escribir "F [2] 1x3  2x3  3x3  4x3  5x3  6x3  7x3  8x3  9x3  10x3";
+                    Escribir "I [3] 1x4  2x4  3x4  4x4  5x4  6x4  7x4  8x4  9x4  10x4";
+                    Escribir "L [4] 1x5  2x5  3x5  4x5  5x5  6x5  7x5  8x5  9x5  10x5";
+                    Escribir "A [5] 1x6  2x6  3x6  4x6  5x6  6x6  7x6  8x6  9x6  10x6";
+                    Escribir "S [6] 1x7  2x7  3x7  4x7  5x7  6x7  7x7  8x7  9x7  10x7";
+                    Escribir "  [7] 1x8  2x8  3x8  4x8  5x8  6x8  7x8  8x8  9x8  10x8";
+                    Escribir "  [8] 1x9  2x9  3x9  4x9  5x9  6x9  7x9  8x9  9x9  10x9";
+                    Escribir "  [9] 1x10 2x10 3x10 4x10 5x10 6x10 7x10 8x10 9x10 10x10";
+                    Escribir " ";
+                    
+                    
+                    i <- 1;
+                    j <- 1;
+                    
+                    Para fila <- 0 hasta 9 Con Paso 1 Hacer
+                        para columna <- 0 hasta 9 con paso 1 Hacer
+                            matriz[fila,columna] <- i * j;
+                            i <- i + 1;
+                        FinPara
+                        i <- 1;
+                        j <- j + 1;
+                    FinPara
+                    
+                    Escribir " ";
+                    Escribir Sin Saltar "Digite el numero de fila: ";
+                    Leer a;
+                    Escribir Sin Saltar "Digite el numero de columna: ";
+                    Leer b;
+                    
+                    Limpiar Pantalla;
+                    Escribir "El resultado es: ",matriz[a,b];
+
+                    Escribir " ";
+                    
+                FinProceso
+            </pre>
+        </div>    
+    </section>
+    <br>
+
+    <h2>
+        <a href="../html/pseint.html">REGRESAR</a>
+    </h2>
+    <script src="/index.js"></script>    
+</body>
+</html>

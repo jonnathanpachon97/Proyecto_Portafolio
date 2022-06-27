@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables e Impresion</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2>Taller #1</h2>
+    <div class="video">
+        <figure>
+            <img src="/img/aldeano.gif" width="400">
+        </figure> 
+    </div>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 1</h3>
+        <h5>1.Realizar un programa el cual solicite su nombre y apellidos.</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio1 {
+                    public static void main(String[] args) {
+                        Scanner entrada = new Scanner(System.in);
+
+                        String nombre;
+                        String apellidos;
+
+                        System.out.print("Digite su nombre: ");
+                        nombre = entrada.nextLine();
+                        System.out.print("Digite sus apellidos: ");
+                        apellidos = entrada.nextLine();
+
+                        System.out.println("su nombre es: "+nombre+" "+apellidos);
+                    }
+                }
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 2</h3>
+        <h5>2.Realizar un programa el cual solicite su nombre, apellidos , edad y estatura.</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio2 {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        String nombre, apellidos;
+                        int edad;
+                        float estatura;
+
+                        System.out.print("Digite su nombre: ");
+                        nombre = input.nextLine();
+                        System.out.print("Digite sus apellidos: ");
+                        apellidos = input.nextLine();
+                        System.out.print("Digite su edad: ");
+                        edad = input.nextInt();
+                        System.out.print("Digite su estatura: ");
+                        estatura = input.nextFloat();
+
+                        System.out.println("Su nombre es "+nombre+" "+apellidos+" tiene "+edad+" años y mide "+estatura);
+                    }
+                }
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 3</h3>
+        <h5>3.Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio3 {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        String nombre, apellidos, nombreMadre, apellidosMadre, nombrePadre, apellidosPadre;
+
+                        System.out.print("Digite su nombre: ");
+                        nombre = input.nextLine();
+                        System.out.print("Digite sus apellidos: ");
+                        apellidos = input.nextLine();
+                        System.out.print("Digite el nombre de su madre: ");
+                        nombreMadre = input.nextLine();
+                        System.out.print("Digite los apellidos de su madre: ");
+                        apellidosMadre = input.nextLine();
+                        System.out.print("Digite el nombre de su padre: ");
+                        nombrePadre = input.nextLine();
+                        System.out.print("Digite los apellidos de su padre: ");
+                        apellidosPadre = input.nextLine();
+
+                        System.out.println("Yo "+nombre+" "+apellidos+" , soy hijo de "+nombreMadre+" "+apellidosMadre+" y "+nombrePadre+" "+apellidosPadre+".");
+                    }
+                }        
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 4</h3>
+        <h5>4.Realizar un programa el cual solicite el nombre de una ciudad capital y el pais. Al finalizar debe imprimir en pantalla el siguiente mensaje "la ciudad [nombre de la ciudad, el la capital del pais [nombre del pais].</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio4 {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        String ciudadCapital, pais;
+
+                        System.out.print("Digite una ciudad capital: ");
+                        ciudadCapital = input.nextLine();
+                        System.out.print("Digite el pais de la ciudad "+ciudadCapital+":");
+                        pais = input.nextLine();
+
+                        System.out.println("La ciudad "+ciudadCapital+" ,es la capital del pais"+" "+pais);
+                    }
+                }    
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 5</h3>
+        <h5>5.Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su nombre completo. Al finalizar el sistema debe e imprimir en pantalla el siguiente mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de edad y [Nombre Completo] es actualmente su dueño(a).</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio5 {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        String nombreMascota, tipoMascota, nombreAmo, edadMascota;
+
+
+                        System.out.print("Digite el nombre de su mascota: ");
+                        nombreMascota = input.nextLine();
+                        System.out.print("Digite la edad de su mascota: ");
+                        edadMascota = input.nextLine();
+                        System.out.print("Digite la raza de su mascota: ");
+                        tipoMascota = input.nextLine();
+                        System.out.print("Digite el nombre del amo: ");
+                        nombreAmo =  input.nextLine();
+
+                        System.out.println(nombreMascota+""+"es un(a)) "+tipoMascota+" "+" ,el cual, tiene "+edadMascota+" "+" años de edad y "+nombreAmo+" es actualmente su dueño(a).");
+                    }
+                }           
+            </pre>
+        </div>    
+    </section>
+    <br>
+
+    <h2>
+        <a href="../html/java.html">REGRESAR</a>
+    </h2>
+    <script src="/index.js"></script>
+    
+</body>
+</html>

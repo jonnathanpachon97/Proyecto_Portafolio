@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2>Taller #3</h2>
+    <div class="video">
+        <figure>
+            <img src="/img/toro.gif" width="400">
+        </figure> 
+    </div>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 1</h3>
+        <h5>1. Realizar la siguiente figura por medio del ciclo Para</h5>
+        <div class="codigo">
+            <pre>
+                public class Ejercicio1_Ciclos {
+                    public static void main(String[] args) {
+                
+                
+                        String estrella;
+                        estrella = "";
+                
+                        for(int i=0;i<10;i++){
+                            estrella = (estrella + "*");
+                            System.out.println(estrella);
+                        }
+                    }
+                }              
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 2</h3>
+        <h5>2. Realizar la siguiente figura por medio del ciclo Mientras - Hacer</h5>
+        <div class="codigo">
+            <pre>
+                public class Ejercicio2_Ciclos {
+                    public static void main(String[] args) {
+                
+                        String espacio, estrella;
+                        int n, contador1, contador2;
+                
+                        espacio = " ";
+                        estrella = "";
+                        n = 10;
+                
+                        for (int i=0;i<10;i++){
+                            for (int j=0;j<n;j++){
+                                System.out.print(espacio);
+                            }
+                            n--;
+                            estrella = (estrella + "*");
+                            System.out.println(estrella);
+                            }
+                        }
+                    }                   
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 3</h3>
+        <h5>3. Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que</h5>
+        <div class="codigo">
+            <pre>
+                public class Ejercicio3_Ciclos {
+                    public static void main(String[] args) {
+                
+                        String espacio, estrella1, estrella2, estrella3, estrella4;
+                        int n, m, contador1, contador2;
+                
+                        espacio = " ";
+                        estrella1 = "";
+                        estrella2 = "";
+                        estrella3 = "*";
+                        estrella4 = "";
+                        n = 10;
+                        m = 9;
+                
+                        for (int i=0;i<10;i++){
+                            for (int j=0;j<n;j++){
+                                System.out.print(espacio);
+                            }
+                            n--;
+                            estrella1 = ("*" + estrella1);
+                            System.out.println(estrella1+estrella2);
+                            estrella2 = (estrella2 + "*");
+                        }
+                        System.out.println("         ***         ");
+                        for (int k=0;k<3;k++){
+                            for (int l=0;l<m;l++){
+                                System.out.print(espacio);
+                            }
+                            m--;
+                            estrella3 = ("**" + estrella3);
+                            System.out.println(estrella4 + estrella3);
+                        }
+                    }
+                }                   
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 4</h3>
+        <h5>4. Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por medio del ciclo Para;
+            esta debe
+            ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea crear la tabla del 5, entonces el resultado debería ser
+            el siguiente:</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio4_Ciclos {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        int numeroTabla, resultado;
+
+                        System.out.print("Digite el numero, del cual desea generar la tabla de multiplicar: ");
+                        numeroTabla = Integer.parseInt(input.nextLine());
+
+                        for (int i=1;i<=10;i++){
+                            resultado = (numeroTabla * i);
+                            System.out.println(i+" x "+numeroTabla+" = "+resultado);
+                        }
+                    }
+                }                  
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 5</h3>
+        <h5>5. Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio5_Ciclos {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        int opcion;
+                        String nombre, salir;
+
+                        nombre = "x";
+
+                        do {
+                            System.out.println("---MENU DE USUARIO---");
+                            System.out.println("1. Captura de nombre");
+                            System.out.println("2. Saludar persona");
+                            System.out.println("3. Salir del sistema");
+                            opcion = Integer.parseInt(input.nextLine());
+
+                            if (opcion == 1){
+                                System.out.print("Digite su nombre:");
+                                nombre = input.nextLine();
+                            }
+                            else if (opcion == 2){
+                                if (nombre == "x"){
+                                    System.out.println("En la opcion captura de nombre, puede ingresarlo para poder saludarlo");
+                                }
+                                else {
+                                    System.out.println("Hola "+nombre+" , como esta?");
+                                }
+                            }
+                        } while (opcion != 3);
+                    }
+                }                 
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 6</h3>
+        <h5>6. Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el
+            dispositivo. Para ello cada contacto debe contener
+            nombre completo, teléfono y organización. Se requiere que la aplicación
+            permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y
+            eliminar contactos si
+            el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.</h5>
+        <div class="codigo">
+            <pre>
+                package Ejercicio6;
+
+                import java.util.Scanner;
+
+                public class Ejercicio6_Ciclos {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        String nombre;
+                        String organizacion;
+                        int telefono, opcionPrincipal, opcion1, opcion2, opcion3;
+
+                        Contactos contacto1 = new Contactos("",0,"");
+                        Contactos contacto2 = new Contactos("",1,"");
+                        Contactos contacto3 = new Contactos("",2,"");
+
+                        do {
+                            //MENU PRINCIPAL
+                            System.out.println("[#CONTACTOS TELEFONICOS#]");
+                            System.out.println("1. Añadir Contacto");
+                            System.out.println("2. Buscar Contacto");
+                            System.out.println("3. Eliminar Contacto");
+                            System.out.println("4. Salir del Sistema");
+                            opcionPrincipal = Integer.parseInt(input.nextLine());
+
+                            switch (opcionPrincipal){
+                                case 1:
+                                    System.out.println("Seleccione el espacio donde desea almacenar el contacto." +
+                                            "\n1 -" + contacto1.getNombre() +
+                                            "\n2 -" + contacto2.getNombre() +
+                                            "\n3 -" + contacto3.getNombre() +
+                                            "\n4 - Salir al menu principal");
+                                    opcion1 = Integer.parseInt(input.nextLine());
+
+                                    switch (opcion1){
+                                        case 1:
+                                            System.out.println("Digite su nombre: ");
+                                            nombre = input.nextLine();
+                                            contacto1.setNombre(nombre);
+                                            System.out.println("Digite la organizacion: ");
+                                            organizacion = input.nextLine();
+                                            contacto1.setOrganizacion(organizacion);
+                                            System.out.println("Digite el numero de contacto: ");
+                                            telefono = Integer.parseInt(input.nextLine());
+                                            contacto1.setTelefono(telefono);
+
+                                            if (contacto1.getTelefono() == contacto2.getTelefono() || contacto1.getTelefono() == contacto3.getTelefono()){
+                                            System.out.println("Numero ya se encuentra registrado");
+                                                System.out.println("Digite otro numero de contacto: ");
+                                                telefono = Integer.parseInt(input.nextLine());
+                                                contacto1.setTelefono(telefono);
+                                            }
+                                            else if (contacto2.getTelefono() == contacto1.getTelefono() || contacto2.getTelefono() == contacto3.getTelefono()){
+                                                System.out.println("Numero ya se encuentra registrado");
+                                                System.out.println("Digite otro numero de contacto: ");
+                                                telefono = Integer.parseInt(input.nextLine());
+                                                contacto1.setTelefono(telefono);
+                                            }
+                                            else if (contacto3.getTelefono() == contacto1.getTelefono() || contacto3.getTelefono() == contacto2.getTelefono()){
+                                                System.out.println("Numero ya se encuentra registrado");
+                                                System.out.println("Digite otro numero de contacto: ");
+                                                telefono = Integer.parseInt(input.nextLine());
+                                                contacto1.setTelefono(telefono);
+                                            }
+                                            else {
+                                                System.out.println("Contacto guardado exitosamente");
+                                            }
+                                            break;
+
+                                        case 2:
+                                            System.out.println("Digite su nombre: ");
+                                            nombre = input.nextLine();
+                                            contacto2.setNombre(nombre);
+                                            System.out.println("Digite la organizacion: ");
+                                            organizacion = input.nextLine();
+                                            contacto2.setOrganizacion(organizacion);
+                                            System.out.println("Digite el numero de contacto: ");
+                                            telefono = Integer.parseInt(input.nextLine());
+                                            contacto2.setTelefono(telefono);
+
+                                            if (contacto1.getTelefono() == contacto2.getTelefono() || contacto1.getTelefono() == contacto3.getTelefono()){
+                                                System.out.println("Numero ya se encuentra registrado");
+                                                System.out.println("Digite otro numero de contacto: ");
+                                                telefono = Integer.parseInt(input.nextLine());
+                                                contacto2.setTelefono(telefono);
+                                            }
+                                            else if (contacto2.getTelefono() == contacto1.getTelefono() || contacto2.getTelefono() == contacto3.getTelefono()){
+                                                System.out.println("Numero ya se encuentra registrado");
+                                                System.out.println("Digite otro numero de contacto: ");
+                                                telefono = Integer.parseInt(input.nextLine());
+                                                contacto2.setTelefono(telefono);
+                                            }
+                                            else if (contacto3.getTelefono() == contacto1.getTelefono() || contacto3.getTelefono() == contacto2.getTelefono()){
+                                                System.out.println("Numero ya se encuentra registrado");
+                                                System.out.println("Digite otro numero de contacto: ");
+                                                telefono = Integer.parseInt(input.nextLine());
+                                                contacto2.setTelefono(telefono);
+                                            }
+                                            else {
+                                                System.out.println("Contacto guardado exitosamente");
+                                            }
+                                            break;
+
+                                        case 3:
+                                            System.out.println("Digite su nombre: ");
+                                            nombre = input.nextLine();
+                                            contacto3.setNombre(nombre);
+                                            System.out.println("Digite la organizacion: ");
+                                            organizacion = input.nextLine();
+                                            contacto3.setOrganizacion(organizacion);
+                                            System.out.println("Digite el numero de contacto: ");
+                                            telefono = Integer.parseInt(input.nextLine());
+                                            contacto3.setTelefono(telefono);
+
+                                            if (contacto1.getTelefono() == contacto2.getTelefono() || contacto1.getTelefono() == contacto3.getTelefono()){
+                                                System.out.println("Numero ya se encuentra registrado");
+                                                System.out.println("Digite otro numero de contacto: ");
+                                                telefono = Integer.parseInt(input.nextLine());
+                                                contacto3.setTelefono(telefono);
+                                            }
+                                            else if (contacto2.getTelefono() == contacto1.getTelefono() || contacto2.getTelefono() == contacto3.getTelefono()){
+                                                System.out.println("Numero ya se encuentra registrado");
+                                                System.out.println("Digite otro numero de contacto: ");
+                                                telefono = Integer.parseInt(input.nextLine());
+                                                contacto3.setTelefono(telefono);
+                                            }
+                                            else if (contacto3.getTelefono() == contacto1.getTelefono() || contacto3.getTelefono() == contacto2.getTelefono()){
+                                                System.out.println("Numero ya se encuentra registrado");
+                                                System.out.println("Digite otro numero de contacto: ");
+                                                telefono = Integer.parseInt(input.nextLine());
+                                                contacto3.setTelefono(telefono);
+                                            }
+                                            else {
+                                                System.out.println("Contacto guardado exitosamente");
+                                            }
+                                            break;
+
+                                        case 4:
+                                            System.out.println("Regresando...");
+                                            break;
+
+                                        default:
+                                            System.out.println("Opcion invalida!!!");
+                                            break;
+                                    }
+                                    break;
+
+                                case 2:
+                                    System.out.println("Lista de contactos" +
+                                            "\n1 -" + contacto1.getNombre() +
+                                            "\n2 -" + contacto2.getNombre() +
+                                            "\n3 -" + contacto3.getNombre() +
+                                            "\n4 - Salir al menu principal");
+                                    opcion2 = Integer.parseInt(input.nextLine());
+
+                                    switch (opcion2){
+                                        case 1:
+                                            System.out.println("Contacto: "+contacto1.getNombre());
+                                            System.out.println("Organizacion: "+contacto1.getOrganizacion());
+                                            System.out.println("Telefono: "+contacto1.getTelefono());
+                                            break;
+
+                                        case 2:
+                                            System.out.println("Contacto: "+contacto2.getNombre());
+                                            System.out.println("Organizacion: "+contacto2.getOrganizacion());
+                                            System.out.println("Telefono: "+contacto2.getTelefono());
+                                            break;
+
+                                        case 3:
+                                            System.out.println("Contacto: "+contacto3.getNombre());
+                                            System.out.println("Organizacion: "+contacto3.getOrganizacion());
+                                            System.out.println("Telefono: "+contacto3.getTelefono());
+                                            break;
+
+                                        case 4:
+                                            System.out.println("Regresando...");
+                                            break;
+
+                                        default:
+                                            System.out.println("Opcion invalida!!!");
+                                            break;
+                                    }
+                                    break;
+
+                                case 3:
+                                    System.out.println("Seleccione el contacto que desea eliminar" +
+                                            "\n1 -" + contacto1.getNombre() +
+                                            "\n2 -" + contacto2.getNombre() +
+                                            "\n3 -" + contacto3.getNombre() +
+                                            "\n4 - Salir al menu principal");
+                                    opcion3 = Integer.parseInt(input.nextLine());
+
+                                    switch (opcion3){
+                                        case 1:
+                                            contacto1.setNombre("");
+                                            contacto1.setOrganizacion("");
+                                            contacto1.setTelefono(0);
+                                            break;
+
+                                        case 2:
+                                            contacto2.setNombre("");
+                                            contacto2.setOrganizacion("");
+                                            contacto2.setTelefono(1);
+                                            break;
+
+                                        case 3:
+                                            contacto3.setNombre("");
+                                            contacto3.setOrganizacion("");
+                                            contacto3.setTelefono(2);
+                                            break;
+
+                                        case 4:
+                                            System.out.println("Regresando...");
+                                            break;
+
+                                        default:
+                                            System.out.println("Opcion invalida!!!");
+                                            break;
+                                    }
+                                    break;
+
+                                case 4:
+                                    System.out.println("Abandonando el sistema...");
+                                    break;
+
+                                default:
+                                    System.out.println("Opcion invalida!!!");
+                                    break;
+                            }
+
+                        }while (opcionPrincipal != 4);
+                    }
+                }
+
+                package Ejercicio6;
+
+                public class Contactos {
+
+                    private String nombre;
+                    private int telefono;
+                    private String organizacion;
+
+                    public Contactos(String nombre, int telefono, String organizacion) {
+                        this.nombre = nombre;
+                        this.telefono = telefono;
+                        this.organizacion = organizacion;
+                    }
+
+                    public String getNombre() {
+                        return nombre;
+                    }
+
+                    public void setNombre(String nombre) {
+                        this.nombre = nombre;
+                    }
+
+                    public int getTelefono() {
+                        return telefono;
+                    }
+
+                    public void setTelefono(int telefono) {
+                        this.telefono = telefono;
+                    }
+
+                    public String getOrganizacion() {
+                        return organizacion;
+                    }
+
+                    public void setOrganizacion(String organizacion) {
+                        this.organizacion = organizacion;
+                    }
+
+                }                    
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 4</h3>
+        <h5>4. Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por medio del ciclo Para;
+            esta debe
+            ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea crear la tabla del 5, entonces el resultado debería ser
+            el siguiente:</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio4_Ciclos {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        int numeroTabla, resultado;
+
+                        System.out.print("Digite el numero, del cual desea generar la tabla de multiplicar: ");
+                        numeroTabla = Integer.parseInt(input.nextLine());
+
+                        for (int i=1;i<=10;i++){
+                            resultado = (numeroTabla * i);
+                            System.out.println(i+" x "+numeroTabla+" = "+resultado);
+                        }
+                    }
+                }                  
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 5</h3>
+        <h5>5. Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.</h5>
+        <div class="codigo">
+            <pre>
+                import java.util.Scanner;
+
+                public class Ejercicio5_Ciclos {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        int opcion;
+                        String nombre, salir;
+
+                        nombre = "x";
+
+                        do {
+                            System.out.println("---MENU DE USUARIO---");
+                            System.out.println("1. Captura de nombre");
+                            System.out.println("2. Saludar persona");
+                            System.out.println("3. Salir del sistema");
+                            opcion = Integer.parseInt(input.nextLine());
+
+                            if (opcion == 1){
+                                System.out.print("Digite su nombre:");
+                                nombre = input.nextLine();
+                            }
+                            else if (opcion == 2){
+                                if (nombre == "x"){
+                                    System.out.println("En la opcion captura de nombre, puede ingresarlo para poder saludarlo");
+                                }
+                                else {
+                                    System.out.println("Hola "+nombre+" , como esta?");
+                                }
+                            }
+                        } while (opcion != 3);
+                    }
+                }                 
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 6</h3>
+        <h5>6. Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el
+            dispositivo. Para ello cada contacto debe contener
+            nombre completo, teléfono y organización. Se requiere que la aplicación
+            permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y
+            eliminar contactos si
+            el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.</h5>
+        <div class="codigo">
+            <pre>
+                package Ejercicio6;
+                
+                import java.util.Scanner;
+
+                public class Ejercicio6_Ciclos {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        String nombre;
+                        String organizacion;
+                        int telefono, opcionPrincipal, opcion1, opcion2, opcion3;
+
+                        Contactos contacto1 = new Contactos("",0,"");
+                        Contactos contacto2 = new Contactos("",1,"");
+                        Contactos contacto3 = new Contactos("",2,"");
+
+                        do {
+                            //MENU PRINCIPAL
+                            System.out.println("[#CONTACTOS TELEFONICOS#]");
+                            System.out.println("1. Añadir Contacto");
+                            System.out.println("2. Buscar Contacto");
+                            System.out.println("3. Eliminar Contacto");
+                            System.out.println("4. Salir del Sistema");
+                            opcionPrincipal = Integer.parseInt(input.nextLine());
+
+                            switch (opcionPrincipal){
+                                case 1:
+                                    System.out.println("Seleccione el espacio donde desea almacenar el contacto." +
+                                            "\n1 -" + contacto1.getNombre() +
+                                            "\n2 -" + contacto2.getNombre() +
+                                            "\n3 -" + contacto3.getNombre() +
+                                            "\n4 - Salir al menu principal");
+                                    opcion1 = Integer.parseInt(input.nextLine());
+
+                                    switch (opcion1){
+                                        case 1:
+                                            System.out.println("Digite su nombre: ");
+                                            nombre = input.nextLine();
+                                            contacto1.setNombre(nombre);
+                                            System.out.println("Digite la organizacion: ");
+                                            organizacion = input.nextLine();
+                                            contacto1.setOrganizacion(organizacion);
+                                            System.out.println("Digite el numero de contacto: ");
+                                            telefono = Integer.parseInt(input.nextLine());
+                                            contacto1.setTelefono(telefono);
+
+                                            if (contacto1.getTelefono() == contacto2.getTelefono() || contacto1.getTelefono() == contacto3.getTelefono()){
+                                            System.out.println("Numero ya se encuentra registrado");
+                                                System.out.println("Digite otro numero de contacto: ");
+                                                telefono = Integer.parseInt(input.nextLine());
+                                                contacto1.setTelefono(telefono);
+                                            }
+                                            else if (contacto2.getTelefono() == contacto1.getTelefono() || contacto2.getTelefono() == contacto3.getTelefono()){
+                                                System.out.println("Numero ya se encuentra registrado");
+                                                System.out.println("Digite otro numero de contacto: ");
+                                                telefono = Integer.parseInt(input.nextLine());
+                                                contacto1.setTelefono(telefono);
+                                            }
+                                            else if (contacto3.getTelefono() == contacto1.getTelefono() || contacto3.getTelefono() == contacto2.getTelefono()){
+                                                System.out.println("Numero ya se encuentra registrado");
+                                                System.out.println("Digite otro numero de contacto: ");
+                                                telefono = Integer.parseInt(input.nextLine());
+                                                contacto1.setTelefono(telefono);
+                                            }
+                                            else {
+                                                System.out.println("Contacto guardado exitosamente");
+                                            }
+                                            break;
+
+                                        case 2:
+                                            System.out.println("Digite su nombre: ");
+                                            nombre = input.nextLine();
+                                            contacto2.setNombre(nombre);
+                                            System.out.println("Digite la organizacion: ");
+                                            organizacion = input.nextLine();
+                                            contacto2.setOrganizacion(organizacion);
+                                            System.out.println("Digite el numero de contacto: ");
+                                            telefono = Integer.parseInt(input.nextLine());
+                                            contacto2.setTelefono(telefono);
+
+                                            if (contacto1.getTelefono() == contacto2.getTelefono() || contacto1.getTelefono() == contacto3.getTelefono()){
+                                                System.out.println("Numero ya se encuentra registrado");
+                                                System.out.println("Digite otro numero de contacto: ");
+                                                telefono = Integer.parseInt(input.nextLine());
+                                                contacto2.setTelefono(telefono);
+                                            }
+                                            else if (contacto2.getTelefono() == contacto1.getTelefono() || contacto2.getTelefono() == contacto3.getTelefono()){
+                                                System.out.println("Numero ya se encuentra registrado");
+                                                System.out.println("Digite otro numero de contacto: ");
+                                                telefono = Integer.parseInt(input.nextLine());
+                                                contacto2.setTelefono(telefono);
+                                            }
+                                            else if (contacto3.getTelefono() == contacto1.getTelefono() || contacto3.getTelefono() == contacto2.getTelefono()){
+                                                System.out.println("Numero ya se encuentra registrado");
+                                                System.out.println("Digite otro numero de contacto: ");
+                                                telefono = Integer.parseInt(input.nextLine());
+                                                contacto2.setTelefono(telefono);
+                                            }
+                                            else {
+                                                System.out.println("Contacto guardado exitosamente");
+                                            }
+                                            break;
+
+                                        case 3:
+                                            System.out.println("Digite su nombre: ");
+                                            nombre = input.nextLine();
+                                            contacto3.setNombre(nombre);
+                                            System.out.println("Digite la organizacion: ");
+                                            organizacion = input.nextLine();
+                                            contacto3.setOrganizacion(organizacion);
+                                            System.out.println("Digite el numero de contacto: ");
+                                            telefono = Integer.parseInt(input.nextLine());
+                                            contacto3.setTelefono(telefono);
+
+                                            if (contacto1.getTelefono() == contacto2.getTelefono() || contacto1.getTelefono() == contacto3.getTelefono()){
+                                                System.out.println("Numero ya se encuentra registrado");
+                                                System.out.println("Digite otro numero de contacto: ");
+                                                telefono = Integer.parseInt(input.nextLine());
+                                                contacto3.setTelefono(telefono);
+                                            }
+                                            else if (contacto2.getTelefono() == contacto1.getTelefono() || contacto2.getTelefono() == contacto3.getTelefono()){
+                                                System.out.println("Numero ya se encuentra registrado");
+                                                System.out.println("Digite otro numero de contacto: ");
+                                                telefono = Integer.parseInt(input.nextLine());
+                                                contacto3.setTelefono(telefono);
+                                            }
+                                            else if (contacto3.getTelefono() == contacto1.getTelefono() || contacto3.getTelefono() == contacto2.getTelefono()){
+                                                System.out.println("Numero ya se encuentra registrado");
+                                                System.out.println("Digite otro numero de contacto: ");
+                                                telefono = Integer.parseInt(input.nextLine());
+                                                contacto3.setTelefono(telefono);
+                                            }
+                                            else {
+                                                System.out.println("Contacto guardado exitosamente");
+                                            }
+                                            break;
+
+                                        case 4:
+                                            System.out.println("Regresando...");
+                                            break;
+
+                                        default:
+                                            System.out.println("Opcion invalida!!!");
+                                            break;
+                                    }
+                                    break;
+
+                                case 2:
+                                    System.out.println("Lista de contactos" +
+                                            "\n1 -" + contacto1.getNombre() +
+                                            "\n2 -" + contacto2.getNombre() +
+                                            "\n3 -" + contacto3.getNombre() +
+                                            "\n4 - Salir al menu principal");
+                                    opcion2 = Integer.parseInt(input.nextLine());
+
+                                    switch (opcion2){
+                                        case 1:
+                                            System.out.println("Contacto: "+contacto1.getNombre());
+                                            System.out.println("Organizacion: "+contacto1.getOrganizacion());
+                                            System.out.println("Telefono: "+contacto1.getTelefono());
+                                            break;
+
+                                        case 2:
+                                            System.out.println("Contacto: "+contacto2.getNombre());
+                                            System.out.println("Organizacion: "+contacto2.getOrganizacion());
+                                            System.out.println("Telefono: "+contacto2.getTelefono());
+                                            break;
+
+                                        case 3:
+                                            System.out.println("Contacto: "+contacto3.getNombre());
+                                            System.out.println("Organizacion: "+contacto3.getOrganizacion());
+                                            System.out.println("Telefono: "+contacto3.getTelefono());
+                                            break;
+
+                                        case 4:
+                                            System.out.println("Regresando...");
+                                            break;
+
+                                        default:
+                                            System.out.println("Opcion invalida!!!");
+                                            break;
+                                    }
+                                    break;
+
+                                case 3:
+                                    System.out.println("Seleccione el contacto que desea eliminar" +
+                                            "\n1 -" + contacto1.getNombre() +
+                                            "\n2 -" + contacto2.getNombre() +
+                                            "\n3 -" + contacto3.getNombre() +
+                                            "\n4 - Salir al menu principal");
+                                    opcion3 = Integer.parseInt(input.nextLine());
+
+                                    switch (opcion3){
+                                        case 1:
+                                            contacto1.setNombre("");
+                                            contacto1.setOrganizacion("");
+                                            contacto1.setTelefono(0);
+                                            break;
+
+                                        case 2:
+                                            contacto2.setNombre("");
+                                            contacto2.setOrganizacion("");
+                                            contacto2.setTelefono(1);
+                                            break;
+
+                                        case 3:
+                                            contacto3.setNombre("");
+                                            contacto3.setOrganizacion("");
+                                            contacto3.setTelefono(2);
+                                            break;
+
+                                        case 4:
+                                            System.out.println("Regresando...");
+                                            break;
+
+                                        default:
+                                            System.out.println("Opcion invalida!!!");
+                                            break;
+                                    }
+                                    break;
+
+                                case 4:
+                                    System.out.println("Abandonando el sistema...");
+                                    break;
+
+                                default:
+                                    System.out.println("Opcion invalida!!!");
+                                    break;
+                            }
+
+                        }while (opcionPrincipal != 4);
+                    }
+                }
+
+                package Ejercicio6;
+
+                public class Contactos {
+
+                    private String nombre;
+                    private int telefono;
+                    private String organizacion;
+
+                    public Contactos(String nombre, int telefono, String organizacion) {
+                        this.nombre = nombre;
+                        this.telefono = telefono;
+                        this.organizacion = organizacion;
+                    }
+
+                    public String getNombre() {
+                        return nombre;
+                    }
+
+                    public void setNombre(String nombre) {
+                        this.nombre = nombre;
+                    }
+
+                    public int getTelefono() {
+                        return telefono;
+                    }
+
+                    public void setTelefono(int telefono) {
+                        this.telefono = telefono;
+                    }
+
+                    public String getOrganizacion() {
+                        return organizacion;
+                    }
+
+                    public void setOrganizacion(String organizacion) {
+                        this.organizacion = organizacion;
+                    }
+
+                }                    
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 7</h3>
+        <h5>7. El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación
+            que permita registrar los vehículos que se
+            cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del
+            vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de
+            teléfono. Para cada vehículo
+            se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el
+            parqueadero. Recuerde que
+            el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero
+            solo puede almacenar máximo 5 vehículos.</h5>
+        <div class="codigo">
+            <pre>
+                package Ejercicio7;
+
+                import java.util.Scanner;
+
+                public class Ejercicio7_Ciclos {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        String placa;
+                        String marca;
+                        String nombre;
+                        int telefono, opcionPrincipal, opcion1, opcion2, opcion3;
+
+                        Vehiculos vehiculo1 = new Vehiculos("","","",0);
+                        Vehiculos vehiculo2 = new Vehiculos("","","",0);
+                        Vehiculos vehiculo3 = new Vehiculos("","","",0);
+                        Vehiculos vehiculo4 = new Vehiculos("","","",0);
+                        Vehiculos vehiculo5 = new Vehiculos("","","",0);
+
+                        do {
+                            //MENU PRINCIPAL
+                            System.out.println("[***PARQUEADERO EL GUARDIAN***]");
+                            System.out.println("1. Ingresar Vehiculo");
+                            System.out.println("2. Espacios Disponibles");
+                            System.out.println("3. Retirar Vehiculo");
+                            System.out.println("4. Salir del Sistema");
+                            opcionPrincipal = Integer.parseInt(input.nextLine());
+
+                            switch (opcionPrincipal){
+                                case 1:
+                                    System.out.println("Seleccione el espacio donde desea parquear su vehiculo." +
+                                            "\n1 -" + vehiculo1.getMarca() +
+                                            "\n2 -" + vehiculo2.getMarca() +
+                                            "\n3 -" + vehiculo3.getMarca() +
+                                            "\n4 -" + vehiculo4.getMarca() +
+                                            "\n5 -" + vehiculo5.getMarca() +
+                                            "\n6 - Salir al menu principal");
+                                    opcion1 = Integer.parseInt(input.nextLine());
+
+                                    switch (opcion1){
+                                        case 1:
+                                            System.out.print("Digite la placa del vehiculo: ");
+                                            placa = input.nextLine();
+                                            vehiculo1.setPlaca(placa);
+                                            System.out.print("Digite la marca de su vehiculo: ");
+                                            marca = input.nextLine();
+                                            vehiculo1.setMarca(marca);
+                                            System.out.print("Digite el nombre del dueño del vehiculo: ");
+                                            nombre = input.nextLine();
+                                            vehiculo1.setNombre(nombre);
+                                            System.out.print("Digite el numero de telefono del dueño: ");
+                                            telefono = Integer.parseInt(input.nextLine());
+                                            vehiculo1.setTelefono(telefono);
+                                            break;
+
+                                        case 2:
+                                            System.out.print("Digite la placa del vehiculo: ");
+                                            placa = input.nextLine();
+                                            vehiculo2.setPlaca(placa);
+                                            System.out.print("Digite la marca de su vehiculo: ");
+                                            marca = input.nextLine();
+                                            vehiculo2.setMarca(marca);
+                                            System.out.print("Digite el nombre del dueño del vehiculo: ");
+                                            nombre = input.nextLine();
+                                            vehiculo2.setNombre(nombre);
+                                            System.out.print("Digite el numero de telefono del dueño: ");
+                                            telefono = Integer.parseInt(input.nextLine());
+                                            vehiculo2.setTelefono(telefono);
+                                            break;
+
+                                        case 3:
+                                            System.out.print("Digite la placa del vehiculo: ");
+                                            placa = input.nextLine();
+                                            vehiculo3.setPlaca(placa);
+                                            System.out.print("Digite la marca de su vehiculo: ");
+                                            marca = input.nextLine();
+                                            vehiculo3.setMarca(marca);
+                                            System.out.print("Digite el nombre del dueño del vehiculo: ");
+                                            nombre = input.nextLine();
+                                            vehiculo3.setNombre(nombre);
+                                            System.out.print("Digite el numero de telefono del dueño: ");
+                                            telefono = Integer.parseInt(input.nextLine());
+                                            vehiculo3.setTelefono(telefono);
+                                            break;
+
+                                        case 4:
+                                            System.out.print("Digite la placa del vehiculo: ");
+                                            placa = input.nextLine();
+                                            vehiculo4.setPlaca(placa);
+                                            System.out.print("Digite la marca de su vehiculo: ");
+                                            marca = input.nextLine();
+                                            vehiculo4.setMarca(marca);
+                                            System.out.print("Digite el nombre del dueño del vehiculo: ");
+                                            nombre = input.nextLine();
+                                            vehiculo4.setNombre(nombre);
+                                            System.out.print("Digite el numero de telefono del dueño: ");
+                                            telefono = Integer.parseInt(input.nextLine());
+                                            vehiculo4.setTelefono(telefono);
+                                            break;
+
+                                        case 5:
+                                            System.out.print("Digite la placa del vehiculo: ");
+                                            placa = input.nextLine();
+                                            vehiculo5.setPlaca(placa);
+                                            System.out.print("Digite la marca de su vehiculo: ");
+                                            marca = input.nextLine();
+                                            vehiculo5.setMarca(marca);
+                                            System.out.print("Digite el nombre del dueño del vehiculo: ");
+                                            nombre = input.nextLine();
+                                            vehiculo5.setNombre(nombre);
+                                            System.out.print("Digite el numero de telefono del dueño: ");
+                                            telefono = Integer.parseInt(input.nextLine());
+                                            vehiculo5.setTelefono(telefono);
+                                            break;
+
+                                        case 6:
+                                            System.out.println("Regresando...");
+                                            break;
+
+                                        default:
+                                            System.out.println("Opcion invalida!!!");
+                                            break;
+                                    }
+                                    break;
+
+                                case 2:
+                                    System.out.println("Estado actual del parqueadero." +
+                                            "\n1 -" + vehiculo1.getMarca() +" "+ vehiculo1.getPlaca() +
+                                            "\n2 -" + vehiculo2.getMarca() +" "+ vehiculo2.getPlaca() +
+                                            "\n3 -" + vehiculo3.getMarca() +" "+ vehiculo3.getPlaca() +
+                                            "\n4 -" + vehiculo4.getMarca() +" "+ vehiculo4.getPlaca() +
+                                            "\n5 -" + vehiculo5.getMarca() +" "+ vehiculo5.getPlaca() +
+                                            "\n6 - Salir al menu principal");
+                                    opcion2 = Integer.parseInt(input.nextLine());
+
+                                    switch (opcion2){
+                                        case 1:
+                                            if (vehiculo1.getTelefono() == 0){
+                                                System.out.println("Espacio disponible");
+                                            }
+                                            else {
+                                                System.out.println("Espacio ocupado por el vehiculo: "+vehiculo1.getMarca());
+                                            }
+                                            break;
+
+                                        case 2:
+                                            if (vehiculo2.getTelefono() == 0){
+                                                System.out.println("Espacio disponible");
+                                            }
+                                            else {
+                                                System.out.println("Espacio ocupado por el vehiculo: "+vehiculo2.getMarca());
+                                            }
+                                            break;
+
+                                        case 3:
+                                            if (vehiculo3.getTelefono() == 0){
+                                                System.out.println("Espacio disponible");
+                                            }
+                                            else {
+                                                System.out.println("Espacio ocupado por el vehiculo: "+vehiculo3.getMarca());
+                                            }
+                                            break;
+
+                                        case 4:
+                                            if (vehiculo4.getTelefono() == 0){
+                                                System.out.println("Espacio disponible");
+                                            }
+                                            else {
+                                                System.out.println("Espacio ocupado por el vehiculo: "+vehiculo4.getMarca());
+                                            }
+                                            break;
+
+                                        case 5:
+                                            if (vehiculo5.getTelefono() == 0){
+                                                System.out.println("Espacio disponible");
+                                            }
+                                            else {
+                                                System.out.println("Espacio ocupado por el vehiculo: "+vehiculo5.getMarca());
+                                            }
+                                            break;
+
+                                        case 6:
+                                            System.out.println("Regresando...");
+                                            break;
+
+                                        default:
+                                            System.out.println("Opcion invalida!!!");
+                                            break;
+                                    }
+                                    break;
+
+                                case 3:
+                                    System.out.println("Escoja el espacio del vehiculo que desea retirar." +
+                                            "\n1 -" + vehiculo1.getMarca() +"-"+ vehiculo1.getPlaca() +
+                                            "\n2 -" + vehiculo2.getMarca() +"-"+ vehiculo2.getPlaca() +
+                                            "\n3 -" + vehiculo3.getMarca() +"-"+ vehiculo3.getPlaca() +
+                                            "\n4 -" + vehiculo4.getMarca() +"-"+ vehiculo4.getPlaca() +
+                                            "\n5 -" + vehiculo5.getMarca() +"-"+ vehiculo5.getPlaca() +
+                                            "\n6 - Salir al menu principal");
+                                    opcion3 = Integer.parseInt(input.nextLine());
+
+                                    switch (opcion3){
+                                        case 1:
+                                            vehiculo1.setPlaca("");
+                                            vehiculo1.setMarca("");
+                                            vehiculo1.setNombre("");
+                                            vehiculo1.setTelefono(0);
+                                            break;
+
+                                        case 2:
+                                            vehiculo2.setPlaca("");
+                                            vehiculo2.setMarca("");
+                                            vehiculo2.setNombre("");
+                                            vehiculo2.setTelefono(0);
+                                            break;
+
+                                        case 3:
+                                            vehiculo3.setPlaca("");
+                                            vehiculo3.setMarca("");
+                                            vehiculo3.setNombre("");
+                                            vehiculo3.setTelefono(0);
+                                            break;
+
+                                        case 4:
+                                            vehiculo4.setPlaca("");
+                                            vehiculo4.setMarca("");
+                                            vehiculo4.setNombre("");
+                                            vehiculo4.setTelefono(0);
+                                            break;
+
+                                        case 5:
+                                            vehiculo5.setPlaca("");
+                                            vehiculo5.setMarca("");
+                                            vehiculo5.setNombre("");
+                                            vehiculo5.setTelefono(0);
+                                            break;
+
+                                        case 6:
+                                            System.out.println("Regresando...");
+                                            break;
+
+                                        default:
+                                            System.out.println("Opcion invalida!!!");
+                                            break;
+                                    }
+                                    break;
+
+                                case 4:
+                                    System.out.println("Abandonando el sistema...");
+                                    break;
+
+                                default:
+                                    System.out.println("Opcion invalida!!!");
+                                    break;
+                            }
+
+                        }while (opcionPrincipal !=4);
+                    }
+                }
+
+                package Ejercicio7;
+
+                public class Vehiculos {
+
+                    private String placa;
+                    private String marca;
+                    private String nombre;
+                    private int telefono;
+
+                    public Vehiculos(String placa, String marca, String nombre, int telefono) {
+                        this.placa = placa;
+                        this.marca = marca;
+                        this.nombre = nombre;
+                        this.telefono = telefono;
+                    }
+
+                    public String getPlaca() {
+                        return placa;
+                    }
+
+                    public void setPlaca(String placa) {
+                        this.placa = placa;
+                    }
+
+                    public String getMarca() {
+                        return marca;
+                    }
+
+                    public void setMarca(String marca) {
+                        this.marca = marca;
+                    }
+
+                    public String getNombre() {
+                        return nombre;
+                    }
+
+                    public void setNombre(String nombre) {
+                        this.nombre = nombre;
+                    }
+
+                    public int getTelefono() {
+                        return telefono;
+                    }
+
+                    public void setTelefono(int telefono) {
+                        this.telefono = telefono;
+                    }
+
+                }                        
+            </pre>
+        </div>    
+    </section>
+    <br>
+    <section class="tarjeta">
+        <h3>Ejercicio 8</h3>
+        <h5>8. La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza
+            automovilística y establecer quienes lo han
+            aprobado para continuar con el trámite de adquirir la licencia de conducción. Para
+            cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan
+            presentado el curso y resultados de la
+            prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga
+            presente que la
+            escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.</h5>
+        <div class="codigo">
+            <pre>
+                package Ejercicio8;
+                
+                import java.util.Scanner;
+
+                public class Ejercicio8_Ciclos {
+                    public static void main(String[] args) {
+                        Scanner input = new Scanner(System.in);
+
+                        String nombre;
+                        String calificacion;
+                        int opcionPrincipal, opcion1, opcion2, opcion3;
+
+                        Usuarios usuario1 = new Usuarios("","");
+                        Usuarios usuario2 = new Usuarios("","");
+                        Usuarios usuario3 = new Usuarios("","");
+                        Usuarios usuario4 = new Usuarios("","");
+                        Usuarios usuario5 = new Usuarios("","");
+                        Usuarios usuario6 = new Usuarios("","");
+                        Usuarios usuario7 = new Usuarios("","");
+                        Usuarios usuario8 = new Usuarios("","");
+
+                        do{
+                            //MENU PRINCIPAL
+                            System.out.println("[***ESCUELA AUTOMOVILISTICA - EL MAESTRO***]");
+                            System.out.println("1. Ingresar Usuario");
+                            System.out.println("2. Usuarios Activos");
+                            System.out.println("3. Resultados");
+                            System.out.println("4. Salir del Sistema");
+                            opcionPrincipal = Integer.parseInt(input.nextLine());
+
+                            switch (opcionPrincipal){
+                                case 1:
+                                    System.out.println("Seleccione el espacio donde desea registrar el nuevo usuario." +
+                                            "\n1 -" + usuario1.getNombre() +
+                                            "\n2 -" + usuario2.getNombre() +
+                                            "\n3 -" + usuario3.getNombre() +
+                                            "\n4 -" + usuario4.getNombre() +
+                                            "\n5 -" + usuario5.getNombre() +
+                                            "\n6 -" + usuario6.getNombre() +
+                                            "\n7 -" + usuario7.getNombre() +
+                                            "\n8 -" + usuario8.getNombre() +
+                                            "\n9 - Salir al menu principal");
+                                    opcion1 = Integer.parseInt(input.nextLine());
+
+                                    switch (opcion1){
+                                        case 1:
+                                            System.out.print("Digite el nombre completo del usuario: ");
+                                            nombre = input.nextLine();
+                                            usuario1.setNombre(nombre);
+                                            System.out.print("Digite si el usuario aprobo o no la prueba: ");
+                                            calificacion = input.nextLine();
+                                            usuario1.setCalificacion(calificacion);
+                                            break;
+
+                                        case 2:
+                                            System.out.print("Digite el nombre completo del usuario: ");
+                                            nombre = input.nextLine();
+                                            usuario2.setNombre(nombre);
+                                            System.out.print("Digite si el usuario aprobo o no la prueba: ");
+                                            calificacion = input.nextLine();
+                                            usuario2.setCalificacion(calificacion);
+                                            break;
+
+                                        case 3:
+                                            System.out.print("Digite el nombre completo del usuario: ");
+                                            nombre = input.nextLine();
+                                            usuario3.setNombre(nombre);
+                                            System.out.print("Digite si el usuario aprobo o no la prueba: ");
+                                            calificacion = input.nextLine();
+                                            usuario3.setCalificacion(calificacion);
+                                            break;
+
+                                        case 4:
+                                            System.out.print("Digite el nombre completo del usuario: ");
+                                            nombre = input.nextLine();
+                                            usuario4.setNombre(nombre);
+                                            System.out.print("Digite si el usuario aprobo o no la prueba: ");
+                                            calificacion = input.nextLine();
+                                            usuario4.setCalificacion(calificacion);
+                                            break;
+
+                                        case 5:
+                                            System.out.print("Digite el nombre completo del usuario: ");
+                                            nombre = input.nextLine();
+                                            usuario5.setNombre(nombre);
+                                            System.out.print("Digite si el usuario aprobo o no la prueba: ");
+                                            calificacion = input.nextLine();
+                                            usuario5.setCalificacion(calificacion);
+                                            break;
+
+                                        case 6:
+                                            System.out.print("Digite el nombre completo del usuario: ");
+                                            nombre = input.nextLine();
+                                            usuario6.setNombre(nombre);
+                                            System.out.print("Digite si el usuario aprobo o no la prueba: ");
+                                            calificacion = input.nextLine();
+                                            usuario6.setCalificacion(calificacion);
+                                            break;
+
+                                        case 7:
+                                            System.out.print("Digite el nombre completo del usuario: ");
+                                            nombre = input.nextLine();
+                                            usuario7.setNombre(nombre);
+                                            System.out.print("Digite si el usuario aprobo o no la prueba: ");
+                                            calificacion = input.nextLine();
+                                            usuario7.setCalificacion(calificacion);
+                                            break;
+
+                                        case 8:
+                                            System.out.print("Digite el nombre completo del usuario: ");
+                                            nombre = input.nextLine();
+                                            usuario8.setNombre(nombre);
+                                            System.out.print("Digite si el usuario aprobo o no la prueba: ");
+                                            calificacion = input.nextLine();
+                                            usuario8.setCalificacion(calificacion);
+                                            break;
+
+                                        case 9:
+                                            System.out.println("Regresando...");
+                                            break;
+
+                                        default:
+                                            System.out.println("Opcion invalida!!!");
+                                            break;
+                                    }
+                                    break;
+
+                                case 2:
+                                    System.out.println("Lista de usuarios" +
+                                            "\n1 -" + usuario1.getNombre() +
+                                            "\n2 -" + usuario2.getNombre() +
+                                            "\n3 -" + usuario3.getNombre() +
+                                            "\n4 -" + usuario4.getNombre() +
+                                            "\n5 -" + usuario5.getNombre() +
+                                            "\n6 -" + usuario6.getNombre() +
+                                            "\n7 -" + usuario7.getNombre() +
+                                            "\n8 -" + usuario8.getNombre() +
+                                            "\n9 - Salir al menu principal");
+                                    opcion2 = Integer.parseInt(input.nextLine());
+
+                                    switch (opcion2){
+                                        case 1:
+                                            if (usuario1.getNombre() == ""){
+                                                System.out.println("Espacio disponible para ingresar usuario nuevo.");
+                                            }
+                                            else {
+                                                System.out.println("El usuario "+usuario1.getNombre()+" ,se encuentra activo.");
+                                            }
+                                            break;
+
+                                        case 2:
+                                            if (usuario2.getNombre() == ""){
+                                                System.out.println("Espacio disponible para ingresar usuario nuevo.");
+                                            }
+                                            else {
+                                                System.out.println("El usuario "+usuario1.getNombre()+" ,se encuentra activo.");
+                                            }
+                                            break;
+
+                                        case 3:
+                                            if (usuario3.getNombre() == ""){
+                                                System.out.println("Espacio disponible para ingresar usuario nuevo.");
+                                            }
+                                            else {
+                                                System.out.println("El usuario "+usuario1.getNombre()+" ,se encuentra activo.");
+                                            }
+                                            break;
+
+                                        case 4:
+                                            if (usuario4.getNombre() == ""){
+                                                System.out.println("Espacio disponible para ingresar usuario nuevo.");
+                                            }
+                                            else {
+                                                System.out.println("El usuario "+usuario1.getNombre()+" ,se encuentra activo.");
+                                            }
+                                            break;
+
+                                        case 5:
+                                            if (usuario5.getNombre() == ""){
+                                                System.out.println("Espacio disponible para ingresar usuario nuevo.");
+                                            }
+                                            else {
+                                                System.out.println("El usuario "+usuario1.getNombre()+" ,se encuentra activo.");
+                                            }
+                                            break;
+
+                                        case 6:
+                                            if (usuario6.getNombre() == ""){
+                                                System.out.println("Espacio disponible para ingresar usuario nuevo.");
+                                            }
+                                            else {
+                                                System.out.println("El usuario "+usuario1.getNombre()+" ,se encuentra activo.");
+                                            }
+                                            break;
+
+                                        case 7:
+                                            if (usuario7.getNombre() == ""){
+                                                System.out.println("Espacio disponible para ingresar usuario nuevo.");
+                                            }
+                                            else {
+                                                System.out.println("El usuario "+usuario1.getNombre()+" ,se encuentra activo.");
+                                            }
+                                            break;
+
+                                        case 8:
+                                            if (usuario8.getNombre() == ""){
+                                                System.out.println("Espacio disponible para ingresar usuario nuevo.");
+                                            }
+                                            else {
+                                                System.out.println("El usuario "+usuario1.getNombre()+" ,se encuentra activo.");
+                                            }
+                                            break;
+
+                                        case 9:
+                                            System.out.println("Regresando...");
+                                            break;
+
+                                        default:
+                                            System.out.println("Opcion invalida!!!");
+                                            break;
+                                    }
+                                    break;
+
+                                case 3:
+                                    System.out.println("Lista de calificaciones" +
+                                            "\n1 -" + usuario1.getNombre() +
+                                            "\n2 -" + usuario2.getNombre() +
+                                            "\n3 -" + usuario3.getNombre() +
+                                            "\n4 -" + usuario4.getNombre() +
+                                            "\n5 -" + usuario5.getNombre() +
+                                            "\n6 -" + usuario6.getNombre() +
+                                            "\n7 -" + usuario7.getNombre() +
+                                            "\n8 -" + usuario8.getNombre() +
+                                            "\n9 - Salir al menu principal");
+                                    opcion3 = Integer.parseInt(input.nextLine());
+
+                                    switch (opcion3){
+                                        case 1:
+                                            if (usuario1.getCalificacion() == ""){
+                                                System.out.println("No se encuentra registro.");
+                                            }
+                                            else if (usuario1.getCalificacion().equals("aprobado")){
+                                                System.out.println("La calificacion del usuario " +usuario1.getNombre()+" es: "+usuario1.getCalificacion()+
+                                                        "\nEl usuario puede seguir con el proceso.");
+                                            }
+                                            else {
+                                                System.out.println("El usuario debe repetir la prueba.");
+                                            }
+                                            break;
+
+                                        case 2:
+                                            if (usuario2.getCalificacion() == ""){
+                                                System.out.println("No se encuentra registro.");
+                                            }
+                                            else if (usuario2.getCalificacion().equals("aprobado")){
+                                                System.out.println("La calificacion del usuario " +usuario2.getNombre()+" es: "+usuario2.getCalificacion()+
+                                                        "\nEl usuario puede seguir con el proceso.");
+                                            }
+                                            else {
+                                                System.out.println("El usuario debe repetir la prueba.");
+                                            }
+                                            break;
+
+                                        case 3:
+                                            if (usuario3.getCalificacion() == ""){
+                                                System.out.println("No se encuentra registro.");
+                                            }
+                                            else if (usuario3.getCalificacion().equals("aprobado")){
+                                                System.out.println("La calificacion del usuario " +usuario3.getNombre()+" es: "+usuario3.getCalificacion()+
+                                                        "\nEl usuario puede seguir con el proceso.");
+                                            }
+                                            else {
+                                                System.out.println("El usuario debe repetir la prueba.");
+                                            }
+                                            break;
+
+                                        case 4:
+                                            if (usuario4.getCalificacion() == ""){
+                                                System.out.println("No se encuentra registro.");
+                                            }
+                                            else if (usuario4.getCalificacion().equals("aprobado")){
+                                                System.out.println("La calificacion del usuario " +usuario4.getNombre()+" es: "+usuario4.getCalificacion()+
+                                                        "\nEl usuario puede seguir con el proceso.");
+                                            }
+                                            else {
+                                                System.out.println("El usuario debe repetir la prueba.");
+                                            }
+                                            break;
+
+                                        case 5:
+                                            if (usuario5.getCalificacion() == ""){
+                                                System.out.println("No se encuentra registro.");
+                                            }
+                                            else if (usuario5.getCalificacion().equals("aprobado")){
+                                                System.out.println("La calificacion del usuario " +usuario5.getNombre()+" es: "+usuario5.getCalificacion()+
+                                                        "\nEl usuario puede seguir con el proceso.");
+                                            }
+                                            else {
+                                                System.out.println("El usuario debe repetir la prueba.");
+                                            }
+                                            break;
+
+                                        case 6:
+                                            if (usuario6.getCalificacion() == ""){
+                                                System.out.println("No se encuentra registro.");
+                                            }
+                                            else if (usuario6.getCalificacion().equals("aprobado")){
+                                                System.out.println("La calificacion del usuario " +usuario6.getNombre()+" es: "+usuario6.getCalificacion()+
+                                                        "\nEl usuario puede seguir con el proceso.");
+                                            }
+                                            else {
+                                                System.out.println("El usuario debe repetir la prueba.");
+                                            }
+                                            break;
+
+                                        case 7:
+                                            if (usuario7.getCalificacion() == ""){
+                                                System.out.println("No se encuentra registro.");
+                                            }
+                                            else if (usuario7.getCalificacion().equals("aprobado")){
+                                                System.out.println("La calificacion del usuario " +usuario7.getNombre()+" es: "+usuario7.getCalificacion()+
+                                                        "\nEl usuario puede seguir con el proceso.");
+                                            }
+                                            else {
+                                                System.out.println("El usuario debe repetir la prueba.");
+                                            }
+                                            break;
+
+                                        case 8:
+                                            if (usuario8.getCalificacion() == ""){
+                                                System.out.println("No se encuentra registro.");
+                                            }
+                                            else if (usuario8.getCalificacion().equals("aprobado")){
+                                                System.out.println("La calificacion del usuario " +usuario8.getNombre()+" es: "+usuario8.getCalificacion()+
+                                                        "\nEl usuario puede seguir con el proceso.");
+                                            }
+                                            else {
+                                                System.out.println("El usuario debe repetir la prueba.");
+                                            }
+                                            break;
+
+                                        case 9:
+                                            System.out.println("Regresando...");
+                                            break;
+
+                                        default:
+                                            System.out.println("Opcion invalida!!!");
+                                            break;
+                                    }
+                                    break;
+
+                                case 4:
+                                    System.out.println("Abandonando el sistema...");
+                                    break;
+
+                                default:
+                                    System.out.println("Opcion invalida!!!");
+                                    break;
+                            }
+
+                        }while (opcionPrincipal != 4);
+                    }
+                }
+
+                package Ejercicio8;
+
+                public class Usuarios {
+
+                    private String nombre;
+                    private String calificacion;
+
+                    public Usuarios(String nombre, String calificacion) {
+                        this.nombre = nombre;
+                        this.calificacion = calificacion;
+                    }
+
+                    public String getNombre() {
+                        return nombre;
+                    }
+
+                    public void setNombre(String nombre) {
+                        this.nombre = nombre;
+                    }
+
+                    public String getCalificacion() {
+                        return calificacion;
+                    }
+
+                    public void setCalificacion(String calificacion) {
+                        this.calificacion = calificacion;
+                    }
+                }                          
+            </pre>
+        </div>    
+    </section>
+    <br>
+
+    <h2>
+        <a href="../html/java.html">REGRESAR</a>
+    </h2>
+    <script src="/index.js"></script>
+</body>
+</html>
