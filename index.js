@@ -8,11 +8,11 @@ function hojaDeVida(){
 }
 
 function pseint(){
-    location.href = "/html/pseint.html";
+    location.href = "https://jonnathanpachon97.github.io/Proyecto_Portafolio/html/pseint.html";
 }
 
 function java(){
-    location.href = "/html/java.html";
+    location.href = "https://jonnathanpachon97.github.io/Proyecto_Portafolio/html/java.html";
 }
 
 
@@ -21,23 +21,23 @@ function java(){
 */
 
 function variablesEImpresion(){
-    location.href = "/html/variableseimpresion.html";
+    location.href = "https://jonnathanpachon97.github.io/Proyecto_Portafolio/html/variableseimpresion.html";
 }
 
 function condicionalespseint(){
-    location.href = "/html/condicionalespseint.html";
+    location.href = "https://jonnathanpachon97.github.io/Proyecto_Portafolio/html/condicionalespseint.html";
 }
 
 function ciclospseint(){
-    location.href = "/html/ciclospseint.html";
+    location.href = "https://jonnathanpachon97.github.io/Proyecto_Portafolio/html/ciclospseint.html";
 }
 
 function arreglospseint(){
-    location.href = "/html/arreglospseint.html";
+    location.href = "https://jonnathanpachon97.github.io/Proyecto_Portafolio/html/arreglospseint.html";
 }
 
 function funcionespseint(){
-    location.href = "/html/funcionespseint.html";
+    location.href = "https://jonnathanpachon97.github.io/Proyecto_Portafolio/html/funcionespseint.html";
 }
 
 
@@ -46,17 +46,17 @@ function funcionespseint(){
 */
 
 function variablesEImpresionJava(){
-    location.href = "/html/variableseimpresionjava.html";
+    location.href = "https://jonnathanpachon97.github.io/Proyecto_Portafolio/html/variableseimpresionjava.html";
 }
 
 function condicionalesJava(){
-    location.href = "/html/condicionalesjava.html";
+    location.href = "https://jonnathanpachon97.github.io/Proyecto_Portafolio/html/condicionalesjava.html";
 }
 
 function ciclosJava(){
-    location.href = "/html/ciclosjava.html";
+    location.href = "https://jonnathanpachon97.github.io/Proyecto_Portafolio/html/ciclosjava.html";
 }
 
 function arreglosJava(){
-    location.href = "/html/arreglosjava.html";
+    location.href = "https://jonnathanpachon97.github.io/Proyecto_Portafolio/html/arreglosjava.html";
 }
